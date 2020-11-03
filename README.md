@@ -1,10 +1,38 @@
 # OpenExotics
 
-Features, MVP:
-1. login user auth
-2. Dealerships page
-3. reservations
-4. ratings/reviews
+# Features - MVP
+-----------------
+- [ ] Login / user auth
+- [ ] Dealerships page
+- [ ] Reservations
+- [ ] Ratings/reviews
+- [ ] Signup
+
+
+# Tables
+----------
+- Users
+    -id
+    -username
+    -password
+    -email
+- Dealerships
+    -id
+    -inventory
+    -location
+    -bio
+- Vehicles
+    -id
+    -Make
+    -Model
+    -other info.
+
+
+# Wireframes
+
+![wireframe](wireframe.png)
+
+
 
 # Flask React Project
 
