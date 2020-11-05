@@ -18,7 +18,6 @@
     -email
 - Dealerships
     -id
-    -inventory
     -location
     -bio
 - Vehicles
@@ -26,6 +25,9 @@
     -Make
     -Model
     -other info.
+
+joins table with dealership id and car id
+
 
 
 # Wireframes

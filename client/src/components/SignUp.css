@@ -1,0 +1,14 @@
+.sign-up-container{
+    display: flex;
+    width: 200px;
+    height: 400px;
+    padding: 100px;
+    border: 1px solid black;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.form-group{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

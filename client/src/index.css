@@ -1,1 +1,21 @@
 /* TODO Add site wide styles */
+.navigation-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 10px;
+    padding: 15px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.OELogo{
+    height: 100px;
+    width: auto;
+    justify-content: start;
+  }

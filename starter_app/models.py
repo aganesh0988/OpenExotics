@@ -63,6 +63,7 @@ class Dealership(db.Model):
     state = db.Column(db.String(50), nullable=False)
     bio = db.Column(db.String(255))
     img = db.Column(db.String(100), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     reservations = db.relationship(
         'Reservation', backref='dealership', lazy=True)
     users = db.relationship('User')
