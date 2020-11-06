@@ -10,7 +10,7 @@ const DealershipsDisplayed = (props) => {
                 <div
                     alt={dealership.name}
                     className='dealership-img-img'
-                    style={{ backgroundImage: `url(/images/${dealership.image})` }}>
+                    style={{ backgroundImage: `url(/images/${dealership.img})` }}>
                 </div>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>

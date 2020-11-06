@@ -20,7 +20,7 @@ def user(currentUserId):
     return {"user": response.to_dict()}
 
 
-@user_routes.route('/new', methods=["POST"])
+@user_routes.route('/signup', methods=["POST"])
 def new_user():
     sign_up_form = SignUpForm()
     if sign_up_form.validate():
