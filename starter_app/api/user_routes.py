@@ -1,5 +1,5 @@
-from flask import Blueprint, jsonify
-from starter_app.models import User
+from flask import Blueprint, jsonify, request
+from starter_app.models import User, db
 from flask_login import current_user, login_required
 from starter_app.forms import SignUpForm
 
@@ -24,6 +24,7 @@ def user(currentUserId):
 def new_user():
     sign_up_form = SignUpForm()
     if sign_up_form.validate():
+        print("hitting here!!!!!!!!!")
         data = request.get_json()
         new_user = User(username=data["username"],
                         name=data["name"],

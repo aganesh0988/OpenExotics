@@ -10,4 +10,4 @@ class SignUpForm(FlaskForm):
     username = StringField("Username", [DataRequired()])
     email = EmailField("email", [DataRequired()])
     password = PasswordField("Password", [DataRequired()])
-    confirm = PasswordField("Confirm Password", [DataRequired()])
+    name = StringField("Name", [DataRequired()])

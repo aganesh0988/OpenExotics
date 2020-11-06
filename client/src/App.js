@@ -103,7 +103,7 @@ function App() {
                         </Route>
                         <Route path="/login" component={UserForm}></Route>
                         <Route path="/signup" component={SignUp}></Route>
-                        <Route path="/" component={Dealerships}></Route>
+                        {/* <Route path="/" component={Dealerships}></Route> */}
                     </Switch>
                 </BrowserRouter>}
         </AuthContext.Provider>
