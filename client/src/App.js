@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
 
 import UserForm from './components/LoginForm';
 import UserList from './components/UsersList';
@@ -73,24 +73,6 @@ function App() {
             {loading && <div>Loading...</div>}
             {!loading &&
                 <BrowserRouter>
-                    {/* <nav>
-                <ul>
-                    <li><NavLink to="/" activeclass="active">Home</NavLink></li>
-                    <li><NavLink to="/users" activeclass="active">Users</NavLink></li>
-                </ul>
-            </nav>
-            <Switch>
-                <Route path="/users">
-                    <UserList />
-                </Route>
-
-                <Route path="/">
-                    <h1>My Home Page</h1>
-                </Route>
-            </Switch> */}
-                    {/* {location.pathname !== '/login' && location.pathname !== '/signup' ?
-                <Navigation />
-                : null} */}
                     <nav>
                         <ul>
                             <li><a onClick={logoutUser} href="#" activeclass="active">Logout</a></li>
@@ -103,7 +85,9 @@ function App() {
                         </Route>
                         <Route path="/login" component={UserForm}></Route>
                         <Route path="/signup" component={SignUp}></Route>
-                        {/* <Route path="/" component={Dealerships}></Route> */}
+                        <Route path="/home">
+                            <Dealerships />
+                        </Route>
                     </Switch>
                 </BrowserRouter>}
         </AuthContext.Provider>

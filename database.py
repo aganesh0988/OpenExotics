@@ -23,7 +23,7 @@ with app.app_context():
                   email='alissa@aa.io', password='password')
 
     lambo_dal = Dealership(name='Lamborghini Dallas', address='601 S Central Expy', city='Richardson',
-                           state='TX', bio='Carries new and pre-owned Lamborghinis.', img='lambo_dal.png')
+                           state='TX', bio='Carries new and pre-owned Lamborghinis.', img='lambo_dal.png', user_id='1')
 
     reservation1 = Reservation(
         user_id=1, dealership_id=1, start_time=date(2020, 12, 20))

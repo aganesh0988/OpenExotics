@@ -9,6 +9,8 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 from starter_app.models import db, User, Dealership, Reservation
 from starter_app.api.user_routes import user_routes
 from starter_app.api.auth_routes import auth_routes
+# from starter_app.api.home import dealerships
+from starter_app.api import home
 
 from starter_app.config import Config
 
@@ -17,6 +19,8 @@ app = Flask(__name__)
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
+# app.register_blueprint(dealerships, url_prefix='/api/dealerships')
+app.register_blueprint(home.bp, url_prefix='/api/home')
 db.init_app(app)
 Migrate(app, db)
 

@@ -4,8 +4,8 @@ import AuthContext from '../auth'
 
 
 function UserForm(props) {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("Ian");
+    const [password, setPassword] = useState("password");
     let history = useHistory();
 
     const [errors, setErrors] = useState([]);

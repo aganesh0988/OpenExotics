@@ -69,6 +69,17 @@ class Dealership(db.Model):
     users = db.relationship('User')
     # vehicles = db.relationship('Vehicle', backref='dealership', lazy=True)
 
+    def to_dict(self):
+        return{
+            "id": self.id,
+            "name": self.name,
+            "address": self.address,
+            "city": self.city,
+            "state": self.state,
+            "bio": self.bio,
+            "img": self.img
+        }
+
 
 class Reservation(db.Model):
     __tablename__ = 'reservations'

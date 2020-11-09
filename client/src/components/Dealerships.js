@@ -45,4 +45,34 @@
 // export default connect(mapStateToProps, mapDispatchToProps)(Dealerships);
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import DealershipsDisplayed from './DealershipsDisplayed';
+
+
+
+const Dealerships = () => {
+
+  const [dealerships, setDealerships] = useState([]);
+
+  useEffect(() => {
+    async function getDealerships() {
+      const response = await fetch('/api/home')
+      const data = await response.json();
+
+      console.log("THIS IS THE RESPONSE", data.dealerships)
+      setDealerships(data.dealerships);
+    }
+    getDealerships()
+  }, [])
+
+  const dealershipComp = dealerships.map((dealership) => <DealershipsDisplayed key={dealership.id} dealership={dealership} />)
+
+
+  return (
+    <>
+      <h1>Hello</h1>
+      <div>{dealershipComp}</div>
+    </>
+  )
+}
+export default Dealerships

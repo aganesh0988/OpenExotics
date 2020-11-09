@@ -14,7 +14,7 @@ const DealershipsDisplayed = (props) => {
                 </div>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
-                    <div>${dealership.address}</div>
+                    <div>Address: {dealership.address}</div>
                 </div>
             </div>
         </div >
@@ -24,3 +24,18 @@ const DealershipsDisplayed = (props) => {
 
 
 export default DealershipsDisplayed;
+
+
+// import React from 'react';
+
+
+// function DealershipsDisplayed(props) {
+//     return (
+//         <>
+//             <strong>NAME</strong> {props.dealership.name}<br />
+//             <strong>IMAGE</strong> {props.dealership.img}<br />
+//             <hr />
+//         </>
+//     );
+// }
+// export default DealershipsDisplayed;
