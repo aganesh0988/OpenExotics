@@ -12,6 +12,7 @@ const DealershipsDisplayed = (props) => {
                     className='dealership-img-img'
                     style={{ backgroundImage: `url(/images/${dealership.img})` }}>
                 </div>
+                <img src={`/images/${dealership.img}`}></img>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
                     <div>Address: {dealership.address}</div>

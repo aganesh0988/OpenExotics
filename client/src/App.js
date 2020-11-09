@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 
 import UserForm from './components/LoginForm';
@@ -12,6 +12,7 @@ import AuthContext from './auth'
 
 
 function App() {
+    //let location = useLocation();
 
     const [fetchWithCSRF, setFetchWithCSRF] = useState(() => fetch);
     const [currentUserId, setCurrentUserId] = useState(null);
