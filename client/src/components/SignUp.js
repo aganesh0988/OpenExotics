@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import AuthContext from "../auth"
 import './SignUp.css'
 
@@ -8,7 +8,7 @@ function SignUp(props) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
+    const { fetchWithCSRF } = useContext(AuthContext);
     const [errors, setErrors] = useState([])
 
     const handleUsername = (e) => {
@@ -36,7 +36,7 @@ function SignUp(props) {
         })
         if (data.ok) {
             console.log("data ok")
-            const response = await data.json();
+            // const response = await data.json();
             return <Redirect to={`/users/`} />
         }
         else {
@@ -47,49 +47,9 @@ function SignUp(props) {
     }
 
 
-
-    // const [user, setUser] = useState({
-    //     username: "",
-    //     email: "",
-    //     name: "",
-    //     password: "",
-    // });
-    // const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
-    // const [submitted] = useState(false);
-    // const [errors, setErrors] = useState([])
-
-    // function handleChange(e) {
-    //     const { name, value } = e.target;
-    //     setUser((user) => ({ ...user, [name]: value }));
-    // }
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const { name, email, password, username } = user;
-    //     const data = await fetchWithCSRF("/api/users/signup", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify({
-    //             name,
-    //             email,
-    //             password,
-    //             username,
-    //         }),
-    //     });
-    //     if (data.ok) {
-    //         console.log("data ok")
-    //         const response = await data.json();
-    //         return <Redirect to={`/users/${username}`} />
-    //     }
-    //     else {
-    //         const response = await data.json();
-    //         const { errors } = response
-    //         setErrors(errors)
-    //     }
-    // };
-
     return (
         <div className="signup-form-container">
-            <h1 className="signup-title">Signup</h1>
+            <h1 className="signup-title">Sign Up</h1>
             <form className="signup-form" onSubmit={handleSubmit}>
                 <div className="signup-username-username-container">
                     <div>
@@ -145,6 +105,10 @@ function SignUp(props) {
                 </div>
                 <div className="signup-username-submit-container">
                     <button className="forms-button" variant="contained" color="primary" type="submit" >Signup</button>
+                </div>
+                <div>
+                    <div>Already a member?</div>
+                    <a href="/login">Log In</a>
                 </div>
             </form>
         </div>

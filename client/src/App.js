@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
+import { Switch, Route, useLocation, } from 'react-router-dom';
 
 import UserForm from './components/LoginForm';
 import UserList from './components/UsersList';
@@ -12,7 +11,8 @@ import AuthContext from './auth'
 
 
 function App() {
-    //let location = useLocation();
+
+    let location = useLocation();
 
     const [fetchWithCSRF, setFetchWithCSRF] = useState(() => fetch);
     const [currentUserId, setCurrentUserId] = useState(null);
@@ -66,32 +66,26 @@ function App() {
     }, []);
 
 
-
-    // let location = useLocation();
-
     return (
-        <AuthContext.Provider value={authContextValue}>
-            {loading && <div>Loading...</div>}
-            {!loading &&
-                <BrowserRouter>
-                    <nav>
-                        <ul>
-                            <li><a onClick={logoutUser} href="#" activeclass="active">Logout</a></li>
-                        </ul>
-                    </nav>
+        <>
+            <AuthContext.Provider value={authContextValue}>
+                {location.pathname !== '/login' && location.pathname !== '/signup' ?
                     <Navigation />
-                    <Switch>
-                        <Route path="/users">
-                            <UserList />
-                        </Route>
-                        <Route path="/login" component={UserForm}></Route>
-                        <Route path="/signup" component={SignUp}></Route>
-                        <Route path="/home">
-                            <Dealerships />
-                        </Route>
-                    </Switch>
-                </BrowserRouter>}
-        </AuthContext.Provider>
+                    : null}
+                <Switch>
+                    <Route path="/users">
+                        <UserList />
+                    </Route>
+                    <Route path="/login" component={UserForm}></Route>
+                    <Route path="/signup" component={SignUp}></Route>
+                    <Route path="/">
+                        <Dealerships />
+                    </Route>
+                    <Route path="/dealerships" component={Dealerships}></Route>
+                    <Route path="/login" onClick={logoutUser}></Route>
+                </Switch>
+            </AuthContext.Provider>
+        </>
     );
 }
 

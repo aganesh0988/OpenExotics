@@ -9,7 +9,7 @@ function UserForm(props) {
     let history = useHistory();
 
     const [errors, setErrors] = useState([]);
-    const { fetchWithCSRF, setCurrentUserId, setCurrentUsername } = useContext(AuthContext);
+    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
     const submitForm = (e) => {
         e.preventDefault();
 
@@ -53,6 +53,12 @@ function UserForm(props) {
                 </div>
                 <div className="login-username-submit-container">
                     <button onClick={submitForm} className="forms-button" variant="contained" color="primary">Login</button>
+                </div>
+                <div className="login-signup">
+                    <span>
+                        <span>Not a member?</span>
+                        <a href="/signup">Sign up</a>
+                    </span>
                 </div>
             </form>
         </div>
