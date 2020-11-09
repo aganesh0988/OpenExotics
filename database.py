@@ -21,6 +21,8 @@ with app.app_context():
                   email='soonmi@aa.io', password='password')
     alissa = User(name='Alissa', username='Alissa',
                   email='alissa@aa.io', password='password')
+    demo = User(name='Demo', username='Demo',
+                email='demo@demo.com', password='password')
 
     lambo_dal = Dealership(name='Lamborghini Dallas', address='601 S Central Expy', city='Richardson',
                            state='TX', bio='Carries new and pre-owned Lamborghinis.', img='lambo_dal.png', user_id='1')
@@ -34,6 +36,7 @@ with app.app_context():
     db.session.add(angela)
     db.session.add(soonmi)
     db.session.add(alissa)
+    db.session.add(demo)
     db.session.add(lambo_dal)
     db.session.add(reservation1)
 

@@ -4,7 +4,7 @@ import AuthContext from '../auth'
 
 
 function UserForm(props) {
-    const [username, setUsername] = useState("Ian");
+    const [username, setUsername] = useState("Demo");
     const [password, setPassword] = useState("password");
     let history = useHistory();
 
@@ -31,7 +31,7 @@ function UserForm(props) {
                 setErrors(responseData.errors);
             } else {
                 setCurrentUserId(responseData.current_user_id)
-                history.push('/users')
+                history.push('/')
             }
         }
         loginUser();

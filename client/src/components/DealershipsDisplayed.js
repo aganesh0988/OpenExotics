@@ -7,12 +7,12 @@ const DealershipsDisplayed = (props) => {
     return (
         <div className='dealership-img-wrapper'>
             <div className='dealership-img-container'>
-                <div
+                {/* <div
                     alt={dealership.name}
                     className='dealership-img-img'
                     style={{ backgroundImage: `url(/images/${dealership.img})` }}>
-                </div>
-                <img alt={dealership.name} src={`/images/${dealership.img}`}></img>
+                </div> */}
+                <img alt={dealership.name} className='dealership-img-img' src={`/images/${dealership.img}`}></img>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
                     <div>Address: {dealership.address}</div>

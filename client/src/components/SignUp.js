@@ -37,7 +37,7 @@ function SignUp(props) {
         if (data.ok) {
             console.log("data ok")
             // const response = await data.json();
-            return <Redirect to={`/users/`} />
+            return <Redirect to="/" />
         }
         else {
             const response = await data.json();
