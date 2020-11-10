@@ -1,4 +1,5 @@
 import React from 'react';
+// import Reservations from './Reservations';
 
 
 
@@ -17,6 +18,7 @@ const DealershipsDisplayed = (props) => {
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
                     <div>Address: {dealership.address}</div>
                 </div>
+                {/* <button onClick={} >Reservations</button> */}
             </div>
         </div >
     )

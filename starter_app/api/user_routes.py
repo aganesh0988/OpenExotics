@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from starter_app.models import User, db
-from flask_login import current_user, login_required
+from flask_login import current_user, login_required, login_user
 from starter_app.forms import SignUpForm
 
 user_routes = Blueprint('users', __name__)
@@ -32,6 +32,7 @@ def new_user():
                         password=data["password"])
         db.session.add(new_user)
         db.session.commit()
+        login_user(new_user)
     else:
         return jsonify(success=False, errors=sign_up_form.errors), 400
     return jsonify('ok')

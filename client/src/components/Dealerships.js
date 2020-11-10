@@ -59,7 +59,6 @@ const Dealerships = () => {
       const response = await fetch('/api/home')
       const data = await response.json();
 
-      console.log("THIS IS THE RESPONSE", data.dealerships)
       setDealerships(data.dealerships);
     }
     getDealerships()

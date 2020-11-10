@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import AuthContext from "../auth"
 import './SignUp.css'
 
@@ -8,8 +8,10 @@ function SignUp(props) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { fetchWithCSRF } = useContext(AuthContext);
+    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
     const [errors, setErrors] = useState([])
+
+    let history = useHistory();
 
     const handleUsername = (e) => {
         setUsername(e.target.value)
@@ -34,10 +36,13 @@ function SignUp(props) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password: password, name: name, username: username, email: email }),
         })
+
         if (data.ok) {
             console.log("data ok")
             // const response = await data.json();
-            return <Redirect to="/" />
+            // setCurrentUserId(data.current_user_id)
+            history.push('/dealerships')
+            // return <Redirect to={'/'} />
         }
         else {
             const response = await data.json();
