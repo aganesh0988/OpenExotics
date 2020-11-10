@@ -8,6 +8,5 @@ bp = Blueprint("home", __name__)
 # @login_required
 @bp.route('/')
 def getDealerships():
-    print("GET DEaljdlfjlkdjflsjfjslkjl!!!!!!!!!!!!!!")
     response = Dealership.query.all()
     return {'dealerships': [dealership.to_dict() for dealership in response]}

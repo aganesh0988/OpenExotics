@@ -5,9 +5,9 @@
 - [ ] Login / user auth
 - [ ] Dealerships page
 - [ ] Reservations
-- [ ] Ratings/reviews
 - [ ] Signup
-
+Bonus:
+- [ ] Ratings/reviews
 
 # Tables
 ----------
@@ -20,13 +20,12 @@
     -id
     -location
     -bio
-- Vehicles
-    -id
-    -Make
-    -Model
-    -other info.
+- Reservations
+   - id
+   - user_id (FK)
+   - dealership_id (FK)
+   - start_time
 
-joins table with dealership id and car id
 
 
 
