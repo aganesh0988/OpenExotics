@@ -1,0 +1,17 @@
+.dealership-img-img{
+    width: 250px;
+    height: auto;
+}
+
+.dealership-img-container{
+    display: flex;
+    margin: 30px;
+}
+
+.dealership-img-name{
+    margin-left: 20px;
+}
+
+.dealership-img-name_bio{
+    margin-top: 20px;
+}
