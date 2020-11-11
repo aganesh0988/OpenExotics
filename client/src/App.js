@@ -6,6 +6,7 @@ import UserList from './components/UsersList';
 import Dealerships from './components/Dealerships';
 import SignUp from './components/SignUp';
 import Navigation from './components/Navigation';
+import DealerProfile from './components/DealerProfile';
 import { useEffect, useState } from 'react';
 import AuthContext from './auth'
 
@@ -16,7 +17,7 @@ function App() {
 
     const [fetchWithCSRF, setFetchWithCSRF] = useState(() => fetch);
     const [currentUserId, setCurrentUserId] = useState(null);
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
     const authContextValue = {
         fetchWithCSRF,
@@ -59,7 +60,7 @@ function App() {
                     setCurrentUserId(authData.current_user_id)
                 }
             }
-            setLoading(false)
+            // setLoading(false)
         }
         restoreCSRF();
     }, []);
@@ -77,11 +78,12 @@ function App() {
                     </Route>
                     <Route path="/login" component={UserForm}></Route>
                     <Route path="/signup" component={SignUp}></Route>
-                    <Route path="/">
+                    {/* <Route path="/">
                         <Dealerships />
-                    </Route>
+                    </Route> */}
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
+                    <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>
                 </Switch>
             </AuthContext.Provider>
         </>

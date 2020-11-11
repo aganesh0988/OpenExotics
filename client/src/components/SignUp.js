@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import AuthContext from "../auth"
 import './SignUp.css'
 
@@ -8,7 +8,7 @@ function SignUp(props) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
+    const { fetchWithCSRF } = useContext(AuthContext);
     const [errors, setErrors] = useState([])
 
     let history = useHistory();

@@ -23,3 +23,9 @@ def reservation(user_id):
     db.session.add(new_reservation)
     db.session.commit()
     return {'reservation': new_reservation.to_dict()}, 200
+
+
+@bp.route('/dealership/<int:id>', methods=["GET"])
+def getDealerProfile(id):
+    response = Dealership.query.get(id)
+    return {'dealership': response.to_dict()}
