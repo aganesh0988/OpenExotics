@@ -53,69 +53,71 @@ function SignUp(props) {
 
 
     return (
-        <div className="signup-form-container">
-            <h1 className="signup-title">Sign Up</h1>
-            <form className="signup-form" onSubmit={handleSubmit}>
-                <div className="signup-username-username-container">
-                    <div>
-                        <label>Username:</label>
+        <div className="signup-form-container-main">
+            <div className="signup-form-container">
+                <h1 className="signup-title">Sign Up</h1>
+                <form className="signup-form" onSubmit={handleSubmit}>
+                    <div className="signup-username-username-container">
+                        <div>
+                            <label>Username:</label>
+                        </div>
+                        <div>
+                            <input className="form-input" onChange={handleUsername} value={username} type="text" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.username && errors.username.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="signup-username-email-container">
+                        <div>
+                            <label>Email:</label>
+                        </div>
+                        <div>
+                            <input className="form-input" onChange={handleEmail} value={email} type="text" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.email && errors.email.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="signup-username-password-container">
+                        <div>
+                            <label>Password:</label>
+                        </div>
+                        <div>
+                            <input className="form-input" onChange={handlePassword} value={password} type="password" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.password && errors.password.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="signup-username-confirm-container">
+                        <div>
+                            <label>Name:</label>
+                        </div>
+                        <div>
+                            <input className="form-input" onChange={handleName} value={name} type="name" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.confirm && errors.confirm.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="signup-username-submit-container">
+                        <button className="forms-button" variant="contained" color="primary" type="submit" >Signup</button>
                     </div>
                     <div>
-                        <input className="form-input" onChange={handleUsername} value={username} type="text" />
+                        <div>Already a member?</div>
+                        <a href="/login">Log In</a>
                     </div>
-                    <div className="errors-div">
-                        {errors && errors.username && errors.username.map(error =>
-                            <p>{error}</p>
-                        )}
-                    </div>
-                </div>
-                <div className="signup-username-email-container">
-                    <div>
-                        <label>Email:</label>
-                    </div>
-                    <div>
-                        <input className="form-input" onChange={handleEmail} value={email} type="text" />
-                    </div>
-                    <div className="errors-div">
-                        {errors && errors.email && errors.email.map(error =>
-                            <p>{error}</p>
-                        )}
-                    </div>
-                </div>
-                <div className="signup-username-password-container">
-                    <div>
-                        <label>Password:</label>
-                    </div>
-                    <div>
-                        <input className="form-input" onChange={handlePassword} value={password} type="password" />
-                    </div>
-                    <div className="errors-div">
-                        {errors && errors.password && errors.password.map(error =>
-                            <p>{error}</p>
-                        )}
-                    </div>
-                </div>
-                <div className="signup-username-confirm-container">
-                    <div>
-                        <label>Name:</label>
-                    </div>
-                    <div>
-                        <input className="form-input" onChange={handleName} value={name} type="name" />
-                    </div>
-                    <div className="errors-div">
-                        {errors && errors.confirm && errors.confirm.map(error =>
-                            <p>{error}</p>
-                        )}
-                    </div>
-                </div>
-                <div className="signup-username-submit-container">
-                    <button className="forms-button" variant="contained" color="primary" type="submit" >Signup</button>
-                </div>
-                <div>
-                    <div>Already a member?</div>
-                    <a href="/login">Log In</a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     );
 

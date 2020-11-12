@@ -1,20 +1,22 @@
-/* html.signup-container{
-    display: flex;
-    justify-content: center;
-} */
+.signup-form-container-main{
+    height: 900px;
+    background-image: url("../imagesf/loginsignup.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
 .signup-form-container{
     /* border: 1px solid lightgray; */
 
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     margin: 2%;
-    height: 500px;
 }
 
 .signup-form{

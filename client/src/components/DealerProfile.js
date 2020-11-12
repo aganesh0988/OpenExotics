@@ -17,7 +17,7 @@ const DealerProfile = () => {
             setDealership(data.dealership);
         }
         getDealership()
-    }, [])
+    }, [id])
 
 
 
@@ -29,6 +29,8 @@ const DealerProfile = () => {
             <div>{dealership.address}</div>
             <div>{dealership.city}, {dealership.state}</div>
             <div>{dealership.bio}</div>
+            <div>Schedule a meeting with an associate today!</div>
+            {/* <button onClick={Reservations}>Reserve</button> */}
             {/* <div
                     alt={dealership.name}
                     className='dealership-img-img'
