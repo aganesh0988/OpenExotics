@@ -25,18 +25,18 @@ const DealerProfile = () => {
     return (
         <>
             <h1 className="dealerprofile-name">{dealership.name}</h1>
-
-            <img alt={dealership.name} className='dealership-img-img-dealer' src={`/images/${dealership.img}`}></img>
-            <div>{dealership.address}</div>
-            <div>{dealership.city}, {dealership.state}</div>
-            <div>{dealership.bio}</div>
-            <div>Schedule a meeting with an associate today!</div>
-            {/* <button onClick={Reservations}>Reserve</button> */}
-            {/* <div
-                    alt={dealership.name}
-                    className='dealership-img-img'
-                    style={{ backgroundImage: `url(/images/${dealership.img})` }}>
-            </div> */}
+            <div className='dealerprofile-img-text-wrapper'>
+                <div className='dealerprofile-name-img-wrapper'>
+                    <img alt={dealership.name} className='dealerprofile-name-img-img' src={`/images/${dealership.img}`}></img>
+                </div>
+                <div className='dealerprofile-name-img-text-wrapper' >
+                    <div className='dealerprofile-name-address'>{dealership.address}</div>
+                    <div className='dealerprofile-name-city-state' >{dealership.city}, {dealership.state}</div>
+                    <div className='dealerprofile-name-bio' >{dealership.bio}</div>
+                    <div>Schedule a meeting with an associate today!</div>
+                    {/* <button onClick={Reservations}>Reserve</button> */}
+                </div>
+            </div>
         </>
     )
 }

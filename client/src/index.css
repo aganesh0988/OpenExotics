@@ -46,6 +46,27 @@ html, body{
     color: white;
 }
 
-/* .active-nav{
-    text-decoration: none;
-} */
+.about-OE-header{
+    display: flex;
+    justify-content: center;
+}
+
+.about-OE-header>h3{
+    display: flex;
+    width: 1100px;
+}
+
+.about-OE-header__video{
+    display: flex;
+    justify-content: center;
+}
+
+.about-OE-header__video>iframe{
+    display: flex;
+    width: 1100px;
+}
+
+iframe{
+    height: 600px;
+    width: auto;
+}

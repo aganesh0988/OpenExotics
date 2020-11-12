@@ -3,8 +3,8 @@ import { Redirect } from 'react-router-dom';
 
 const Reservations = () => {
 
-    const [user_id, setUserid] = useState('');
-    const [dealership_id, setDealershipid] = useState('');
+    const [user_id, setUserid] = useState('1');
+    const [dealership_id, setDealershipid] = useState('3');
     const [start_time, setStartTime] = useState('');
 
     const handleUserid = (e) => {
@@ -63,7 +63,7 @@ const Reservations = () => {
                 </div>
                 <div className="reservation-container">
                     <div>
-                        <label>Restaurant id</label>
+                        <label>Dealership id</label>
                     </div>
                     <div>
                         <input className="reservation-form-input" onChange={handleDealershipid} value={dealership_id} type="text" />

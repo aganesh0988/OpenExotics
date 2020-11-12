@@ -1,3 +1,33 @@
 .dealerprofile-name{
     font-variant: small-caps;
 }
+
+.dealerprofile-name-img-wrapper{
+    /* width: 500px;
+    position: relative; */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.dealerprofile-name-img-img{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.dealerprofile-name-img-text-wrapper{
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.dealerprofile-img-text-wrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    height: auto;
+    width: 100%;
+}
