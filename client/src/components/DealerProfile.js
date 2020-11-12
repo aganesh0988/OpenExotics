@@ -29,6 +29,11 @@ const DealerProfile = () => {
             <div>{dealership.address}</div>
             <div>{dealership.city}, {dealership.state}</div>
             <div>{dealership.bio}</div>
+            {/* <div
+                    alt={dealership.name}
+                    className='dealership-img-img'
+                    style={{ backgroundImage: `url(/images/${dealership.img})` }}>
+            </div> */}
         </>
     )
 }
