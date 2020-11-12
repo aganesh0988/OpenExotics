@@ -54,6 +54,7 @@ function SignUp(props) {
 
     return (
         <div className="signup-form-container-main">
+            <img alt='OELogoW' className='OELogoW' src='/images/OEWhite.jpg' />
             <div className="signup-form-container">
                 <h1 className="signup-title">Sign Up</h1>
                 <form className="signup-form" onSubmit={handleSubmit}>

@@ -10,7 +10,7 @@
 .signup-form-container{
     /* border: 1px solid lightgray; */
 
-    height: 450px;
+    height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: center;
