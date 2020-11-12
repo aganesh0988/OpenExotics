@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom'
 
 const DealerProfile = () => {
     const history = useHistory()
-    const idStr = history.location.pathname.split('/')[2]
-    const id = parseInt(idStr, 10)
+    const idString = history.location.pathname.split('/')[2]
+    const id = parseInt(idString, 10)
 
     const [dealership, setDealership] = useState(id);
 
@@ -23,9 +23,12 @@ const DealerProfile = () => {
 
     return (
         <>
-            <h1>Dealer Profile</h1>
-            <div>{dealership.img}</div>
-            <div>{dealership.name}</div>
+            <h1 className="bigger">{dealership.name}</h1>
+
+            <img alt={dealership.name} className='dealership-img-img-dealer' src={`/images/${dealership.img}`}></img>
+            <div>{dealership.address}</div>
+            <div>{dealership.city}, {dealership.state}</div>
+            <div>{dealership.bio}</div>
         </>
     )
 }
