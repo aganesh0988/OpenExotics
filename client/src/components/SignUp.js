@@ -58,6 +58,19 @@ function SignUp(props) {
             <div className="signup-form-container">
                 <h1 className="signup-title">Sign Up</h1>
                 <form className="signup-form" onSubmit={handleSubmit}>
+                    <div className="signup-name-confirm-container">
+                        <div>
+                            <label>Name:</label>
+                        </div>
+                        <div>
+                            <input className="form-input" onChange={handleName} value={name} type="name" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.confirm && errors.confirm.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
+                    </div>
                     <div className="signup-username-username-container">
                         <div>
                             <label>Username:</label>
@@ -93,19 +106,6 @@ function SignUp(props) {
                         </div>
                         <div className="errors-div">
                             {errors && errors.password && errors.password.map(error =>
-                                <p>{error}</p>
-                            )}
-                        </div>
-                    </div>
-                    <div className="signup-username-confirm-container">
-                        <div>
-                            <label>Name:</label>
-                        </div>
-                        <div>
-                            <input className="form-input" onChange={handleName} value={name} type="name" />
-                        </div>
-                        <div className="errors-div">
-                            {errors && errors.confirm && errors.confirm.map(error =>
                                 <p>{error}</p>
                             )}
                         </div>

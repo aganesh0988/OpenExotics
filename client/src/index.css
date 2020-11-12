@@ -5,22 +5,38 @@
     justify-content: space-around;
     align-items: center;
     border: 10px;
-    padding: 15px;
-    font-size: medium;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-style: oblique; */
+    font-weight: bold;
     letter-spacing: 1px;
     list-style-type: none;
-    border-bottom: 3px solid white;
-    margin-bottom: 5px;
+    border-top: 10px double red;
+    border-bottom: 10px double red;
+    margin-bottom: 30px;
     /* background-color: black; */
+}
+
+.navlink-container {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 a:visited{
     color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+a.active-nav{
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: large;
 }
 
 .OELogo-nav{
-    height: 100px;
+    height: 125px;
     width: auto;
     justify-content: start;
   }
@@ -29,3 +45,7 @@ html, body{
     background-color: black;
     color: white;
 }
+
+/* .active-nav{
+    text-decoration: none;
+} */

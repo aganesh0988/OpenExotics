@@ -6,14 +6,12 @@ import '../index.css';
 
 const Navigation = props =>
     <header className='navigation-container'>
-        <img
-            alt='OELogo'
-            className='OELogo-nav' src='/images/OEWhite.jpg' />
-        <NavLink to="/users" activeClassName="active">USERS</NavLink>
-        {/* <NavLink to="/login" activeClassName="active">LOG IN</NavLink>
-        <NavLink to="/signup" activeClassName="active">SIGN UP</NavLink> */}
-        <NavLink to='/dealerships' activeClassName="active">DEALERSHIPS</NavLink>
-        <NavLink to='/login' activeclass="active">LOG OUT</NavLink>
+        <img alt='OELogo' className='OELogo-nav' src='/images/OEWhite.jpg' />
+        <div className="navlink-container">
+            <NavLink to="/users" activeClassName="active" className="active-nav">Users</NavLink>
+            <NavLink to='/dealerships' activeClassName="active" className="active-nav">Dealerships</NavLink>
+            <NavLink to='/login' activeclass="active" className="active-nav">Log Out</NavLink>
+        </div>
     </header>
     ;
 

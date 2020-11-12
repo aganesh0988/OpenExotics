@@ -15,15 +15,18 @@ const DealershipsDisplayed = (props) => {
 
     return (
         <div className='dealership-img-wrapper'>
-            <div className='dealership-img-container'>
-                <img alt={dealership.name} onClick={dealershipHandle} className='dealership-img-img' src={`/images/${dealership.img}`}></img>
+            <div className='dealership-img-container' onClick={dealershipHandle}>
+                <div className="dealership-img-img_container">
+                    <img alt={dealership.name} className='dealership-img-img' src={`/images/${dealership.img}`}></img>
+                </div>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
-                    <div className='dealership-img-name_address'>{dealership.address}</div>
-                    <div className='dealership-img-name_city_state'>{dealership.city}, {dealership.state}</div>
-                    <div className='dealership-img-name_bio' >About: {dealership.bio}</div>
-                    <div>Schedule a meeting with an associate today!</div>
-                    <button onClick={Reservations}>Reserve</button>
+                    {/* <div className='dealership-img-name_address'>{dealership.address}</div> */}
+                    <div className='dealership-img-name__state'>State: {dealership.state}</div>
+                    <div className='dealership-img-name__city'>City: {dealership.city}</div>
+                    <div className='dealership-img-name__bio' >{dealership.bio}</div>
+                    <div>Schedule a meeting with a sales associate today. Click anywhere for more information on this dealership.</div>
+                    {/* <button onClick={Reservations}>Reserve</button> */}
                 </div>
             </div>
         </div >

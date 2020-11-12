@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom'
+import './DealerProfile.css'
 
 const DealerProfile = () => {
     const history = useHistory()
@@ -23,7 +24,7 @@ const DealerProfile = () => {
 
     return (
         <>
-            <h1 className="bigger">{dealership.name}</h1>
+            <h1 className="dealerprofile-name">{dealership.name}</h1>
 
             <img alt={dealership.name} className='dealership-img-img-dealer' src={`/images/${dealership.img}`}></img>
             <div>{dealership.address}</div>

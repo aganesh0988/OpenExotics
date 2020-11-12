@@ -1,19 +1,41 @@
 .dealership-img-img{
-    width: 350px;
+    width: 290px;
     height: auto;
+    border: outset white;
 }
 
 .dealership-img-container{
     display: flex;
-    margin: 30px;
-    border: lightgray solid;
+    margin: 20px 40px;
+    border: white solid 4px;
 }
 
 .dealership-img-name{
+    margin-left: 40px;
+}
+
+
+.dealership-img-img_container{
+    height: 300px;
+    display: flex;
+    align-items: center;
     margin-left: 20px;
 }
 
-.dealership-img-name_bio{
+.dealership-img-name__name{
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.dealership-img-name__state{
+    margin-top: 0px;
+}
+.dealership-img-name__city{
+    margin-top: 7px;
+}
+
+
+.dealership-img-name__bio{
     margin-top: 20px;
     margin-bottom: 20px;
 }

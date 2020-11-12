@@ -30,6 +30,8 @@ with app.app_context():
                         state='TX', bio='Ferrari dealership serving the Dallas/Fort Worth area', img='BF.png', user_id='2')
     rrmc_dal = Dealership(name='Rolls-Royce Motor Cars Dallas', address='5300 Lemmon Avenue', city='Dallas',
                           state='TX', bio='Rolls-Royce Motor Cars Dallas is dedicated to providing an exceptional customer experience.', img='RRMCD.png', user_id='3')
+    am_dal = Dealership(name='Aston Martin Dallas', address='5333 Lemmon Ave', city='Dallas',
+                        state='TX', bio='Getting your Aston Martin custom to your wants and desires is one of the best parts about owning an ultra luxury vehicle. We carry new and pre-owned models.', img='am_dal.png', user_id='1')
 
     reservation1 = Reservation(
         user_id=1, dealership_id=1, start_time=date(2020, 12, 20))
@@ -44,6 +46,7 @@ with app.app_context():
     db.session.add(lambo_dal)
     db.session.add(bf_dal)
     db.session.add(rrmc_dal)
+    db.session.add(am_dal)
     db.session.add(reservation1)
 
     db.session.commit()
