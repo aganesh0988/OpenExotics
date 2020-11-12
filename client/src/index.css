@@ -10,8 +10,13 @@
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     list-style-type: none;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid white;
     margin-bottom: 5px;
+    /* background-color: black; */
+}
+
+a:visited{
+    color: white;
 }
 
 .OELogo{
@@ -19,3 +24,8 @@
     width: auto;
     justify-content: start;
   }
+
+html, body{
+    background-color: black;
+    color: white;
+}

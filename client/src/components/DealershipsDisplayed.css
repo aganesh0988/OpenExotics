@@ -1,11 +1,12 @@
 .dealership-img-img{
-    width: 250px;
+    width: 350px;
     height: auto;
 }
 
 .dealership-img-container{
     display: flex;
     margin: 30px;
+    border: lightgray solid;
 }
 
 .dealership-img-name{
@@ -14,4 +15,5 @@
 
 .dealership-img-name_bio{
     margin-top: 20px;
+    margin-bottom: 20px;
 }

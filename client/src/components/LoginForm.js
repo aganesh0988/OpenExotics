@@ -32,36 +32,38 @@ function UserForm(props) {
                 setErrors(responseData.errors);
             } else {
                 setCurrentUserId(responseData.current_user_id)
-                history.push('/')
+                history.push('/dealerships')
             }
         }
         loginUser();
     }
     return (
-        <div className="login-form-container">
-            <h1 className="login-form-title">Login</h1>
-            <form className="login-form">
-                {errors.length ? errors.map((err) => <li key={err} >{err}</li>) : ''}
-                <div className="field">
-                    <label>Username: </label>
-                    <div className="control">
-                        <input className="form-input input" type="text" value={username} onChange={(e) => setUsername(e.target.value)} name="username" />
+        <div className="login-form-container-main">
+            <div className="login-form-container">
+                <h1 className="login-form-title">Login</h1>
+                <form className="login-form">
+                    {errors.length ? errors.map((err) => <li key={err} >{err}</li>) : ''}
+                    <div className="field">
+                        <label>Username: </label>
+                        <div className="control">
+                            <input className="form-input input" type="text" value={username} onChange={(e) => setUsername(e.target.value)} name="username" />
+                        </div>
+                        <label>Password: </label>
+                        <div className="control">
+                            <input className="form-input input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" />
+                        </div>
                     </div>
-                    <label>Password: </label>
-                    <div className="control">
-                        <input className="form-input input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" />
+                    <div className="login-username-submit-container">
+                        <button onClick={submitForm} className="forms-button" variant="contained" color="primary">Login</button>
                     </div>
-                </div>
-                <div className="login-username-submit-container">
-                    <button onClick={submitForm} className="forms-button" variant="contained" color="primary">Login</button>
-                </div>
-                <div className="login-signup">
-                    <span>
-                        <span>Not a member?  </span>
-                        <a href="/signup"> Sign up</a>
-                    </span>
-                </div>
-            </form>
+                    <div className="login-signup">
+                        <span>
+                            <span>Not a member?  </span>
+                            <a href="/signup"> Sign up</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
