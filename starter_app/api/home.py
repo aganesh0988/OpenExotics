@@ -13,10 +13,9 @@ def getDealerships():
     return {'dealerships': [dealership.to_dict() for dealership in response]}, 200
 
 
-@bp.route('/dealership/reservation', methods=["GET", "POST"])
+@bp.route('/dealership/reservation', methods=["POST"])
 # @login_required
 def reservation():
-    response = Reservation.query.all()
     user_id = request.json.get("user_id", None)
     dealership_id = request.json.get("dealership_id", None)
     print("PRINT!!!!!!!!!", dealership_id, user_id)
@@ -26,6 +25,13 @@ def reservation():
     db.session.add(new_reservation)
     db.session.commit()
     return {'reservation': new_reservation.to_dict()}, 200
+
+
+@bp.route('/dealership/reservation/')
+# @login_required
+def reservation_get():
+    response = Reservation.query.all()
+    return {'reservations': [reservation.to_dict() for reservation in response]}, 200
 
 
 @bp.route('/dealership/<int:id>', methods=["GET"])

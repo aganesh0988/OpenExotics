@@ -88,7 +88,7 @@ class Reservation(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     dealership_id = db.Column(db.Integer, db.ForeignKey(
         'dealerships.id'), nullable=False)
-    start_time = db.Column(db.DateTime(timezone=True), nullable=False)
+    start_time = db.Column(db.DateTime(timezone=True))
 
     def to_dict(self):
         return {

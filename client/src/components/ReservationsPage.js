@@ -12,7 +12,7 @@ const ReservationsPage = () => {
 
     useEffect(() => {
         async function getReservations() {
-            const response = await fetch('/api/home/dealership/reservation')
+            const response = await fetch('/api/home/dealership/reservation/')
             const data = await response.json();
 
             console.log("THIS IS THE RESPONSE", data.reservations)
