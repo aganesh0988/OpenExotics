@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Reservations = () => {
 
-    const [user_id, setUserid] = useState('1');
-    const [dealership_id, setDealershipid] = useState('3');
+    const [user_id, setUserid] = useState('');
+    const [dealership_id, setDealershipid] = useState('');
     const [start_time, setStartTime] = useState('');
+
+    let history = useHistory();
 
     const handleUserid = (e) => {
         setUserid(e.target.value)
@@ -20,18 +22,18 @@ const Reservations = () => {
     }
 
     const handleSubmit = async (e) => {
-
         e.preventDefault()
         console.log("handleSubmit")
-        // const data = await fetch('/api/home/dealership/reservation', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ user_id: user_id, dealership_id: dealership_id, start_time: start_time })
-        // })
+        const data = await fetch('/api/home/dealership/reservation', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: user_id, dealership_id: dealership_id, start_time: start_time }),
+        })
 
-        // if (data.ok) {
-        //     return <Redirect to={'/dealerships'} />
-        // }
+        if (data.ok) {
+            history.push('/dealerships')
+            // return <Redirect to={'/dealerships'} />
+        }
 
     }
 
@@ -52,7 +54,7 @@ const Reservations = () => {
 
     return (
         <>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="reservation-container">
                     <div>
                         <label>User id</label>

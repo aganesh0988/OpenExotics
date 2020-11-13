@@ -39,8 +39,6 @@ function SignUp(props) {
 
         if (data.ok) {
             console.log("data ok")
-            // const response = await data.json();
-            // setCurrentUserId(data.current_user_id)
             history.push('/dealerships')
             // return <Redirect to={'/'} />
         }

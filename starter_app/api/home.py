@@ -15,12 +15,13 @@ def getDealerships():
 
 @bp.route('/dealership/reservation', methods=["GET", "POST"])
 # @login_required
-def reservation(user_id):
+def reservation():
     user_id = request.json.get("user_id", None)
     dealership_id = request.json.get("dealership_id", None)
-    start_time = request.json.get("start_time", None)
+    print("PRINT!!!!!!!!!", dealership_id, user_id)
+    #start_time = request.json.get("start_time", None)
     new_reservation = Reservation(
-        user_id=user_id, dealership_id=dealership_id, start_time=start_time)
+        user_id=user_id, dealership_id=dealership_id)
     db.session.add(new_reservation)
     db.session.commit()
     return {'reservation': new_reservation.to_dict()}, 200
