@@ -23,7 +23,7 @@ const Dealerships = () => {
   return (
     <>
       <div className="about-OE-header__video">
-        <iframe title='SP2' src="https://www.youtube.com/embed/j6xHfwTNo14?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" frameborder="0" allow="autoplay" allowfullscreen="true"></iframe>
+        <iframe title='SP2' src="https://www.youtube.com/embed/j6xHfwTNo14?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" frameBorder="0" allow="autoplay" allowFullScreen={true}></iframe>
       </div>
       {/* width="560" height="315"  */}
       <div className="about-OE-header">

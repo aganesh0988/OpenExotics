@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 const ReservationsPage = () => {
+    // const { reservation } = props;
+    // let history = useHistory()
+
+    // const reservationHandle = () => {
+    //     history.push(`dealership/reservation/${reservation.id}`)
+    // }
 
     const [reservations, setReservations] = useState([])
 
@@ -25,7 +31,11 @@ const ReservationsPage = () => {
 
     return (
         <>
+            <h1>RESERVATION COMPLETE</h1>
             <div>{reservationsDisp}</div>
+            <h1>RESERVATION COMPLETE</h1>
+            <h1>RESERVATION COMPLETE</h1>
+            <h1>RESERVATION COMPLETE</h1>
         </>
     )
 

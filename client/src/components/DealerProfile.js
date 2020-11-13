@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useContext } from 'react';
+// import { Redirect } from 'react-dom';
 import { useHistory } from 'react-router-dom'
 import AuthContext from "../auth"
-import Reservations from './Reservations';
 import './DealerProfile.css'
 
 const DealerProfile = () => {
     const history = useHistory()
     const idString = history.location.pathname.split('/')[2]
     const id = parseInt(idString, 10)
+    const { fetchWithCSRF, currentUserId } = useContext(AuthContext);
 
     const [dealership, setDealership] = useState(id);
 
@@ -23,46 +24,47 @@ const DealerProfile = () => {
     }, [id])
 
 
+    // ;   const [resTime , setResTime] = useState({})
+    const [start_time, setStartTime] = useState({
+        date: '2020-12-20',
+        time: '13:00'
+    });
 
-
-
-    const [user_id, setUserid] = useState('');
-    const [dealership_id, setDealershipid] = useState('');
-    const [start_time, setStartTime] = useState('');
-    const { fetchWithCSRF } = useContext(AuthContext);
-
-
-
-    const handleUserid = (e) => {
-        setUserid(e.target.value)
-    }
-
-    const handleDealershipid = (e) => {
-        setDealershipid(e.target.value)
-    }
 
     const handleStartTime = (e) => {
-        setStartTime(e.target.value)
+        const { id, value } = e.target;
+        setStartTime({ ...start_time, [id]: value })
     }
+    // const { date, time } = start_time;
+    // const startTime = date + " " + time
+
+    // console.log("STARTTIME", startTime)
+
+    // const handleStartTime = (e) => {
+    //     setStartTime(e.target.value)
+    // }
 
     const handleSubmit = async (e) => {
+
+        const { date, time } = start_time;
+        const startTime = new Date(date) + " " + time;
+        console.log("STARTTIME", date)
+        console.log("DATA", start_time, startTime)
+
+
         e.preventDefault()
-        console.log("handleSubmit")
-        console.log(user_id, dealership_id)
         const data = await fetchWithCSRF('/api/home/dealership/reservation', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ user_id: user_id, dealership_id: dealership_id }),
+            body: JSON.stringify({ user_id: currentUserId, dealership_id: id }),
+            // body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: startTime })
         })
 
+
         if (data.ok) {
-            history.push('/dealerships')
-            // return <Redirect to={'/dealerships'} />
+            history.push(`/dealership/reservation`)
         }
     }
-
-
-
 
 
     return (
@@ -85,33 +87,16 @@ const DealerProfile = () => {
                         <form onSubmit={handleSubmit}>
                             <div className="reservation-container">
                                 <div>
-                                    <label>User id</label>
-                                </div>
-                                <div>
-                                    <input className="reservation-form-input" onChange={handleUserid} value={user_id} type="text" />
-                                </div>
-                            </div>
-                            <div className="reservation-container">
-                                <div>
-                                    <label>Dealership id</label>
-                                </div>
-                                <div>
-                                    <input className="reservation-form-input" onChange={handleDealershipid} value={dealership_id} type="text" />
-                                </div>
-                            </div>
-                            <div className="reservation-container">
-                                <div>
                                     <label>Date</label>
-                                    <input type="date" id="date" onChange={handleStartTime} />
-                                    <div className='reserv__time' id="time" onChange={handleStartTime}>
-                                        <label htmlFor="time">Time</label>
-                                        <input
-                                            id="time"
-                                            label="Time"
-                                            type="time"
-                                            defaultValue="19:30"
-                                        />
-                                    </div>
+                                    <input type="date" id="date" defaultValue="2020-12-20" onChange={handleStartTime} />
+                                    {/* <div className="reservation-form-input" id="time" onChange={handleStartTime}> */}
+                                    <label htmlFor="time">Time</label>
+                                    <input onChange={handleStartTime}
+                                        label="Time"
+                                        type="time"
+                                        defaultValue="13:00"
+                                    />
+                                    {/* </div> */}
                                 </div>
                             </div>
                             <button className='dealerprofile-name-button'>Reserve</button>

@@ -16,6 +16,7 @@ def getDealerships():
 @bp.route('/dealership/reservation', methods=["GET", "POST"])
 # @login_required
 def reservation():
+    response = Reservation.query.all()
     user_id = request.json.get("user_id", None)
     dealership_id = request.json.get("dealership_id", None)
     print("PRINT!!!!!!!!!", dealership_id, user_id)

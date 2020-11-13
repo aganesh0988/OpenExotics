@@ -7,6 +7,7 @@ import Dealerships from './components/Dealerships';
 import SignUp from './components/SignUp';
 import Navigation from './components/Navigation';
 import DealerProfile from './components/DealerProfile';
+import ReservationsPage from './components/ReservationsPage';
 import { useEffect, useState } from 'react';
 import AuthContext from './auth'
 
@@ -81,6 +82,7 @@ function App() {
                     {/* <Route path="/">
                         <Dealerships />
                     </Route> */}
+                    <Route path="/dealership/reservation" component={ReservationsPage}></Route>
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
                     <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>

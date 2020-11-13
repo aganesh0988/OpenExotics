@@ -1,85 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Reservations = () => {
+const Reservations = (props) => {
+    // const { reservation } = props;
+    // let history = useHistory()
 
-    const [user_id, setUserid] = useState('');
-    const [dealership_id, setDealershipid] = useState('');
-    const [start_time, setStartTime] = useState('');
-
-    let history = useHistory();
-
-    const handleUserid = (e) => {
-        setUserid(e.target.value)
-    }
-
-    const handleDealershipid = (e) => {
-        setDealershipid(e.target.value)
-    }
-
-    const handleStartTime = (e) => {
-        setStartTime(e.target.value)
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        console.log("handleSubmit")
-        const data = await fetch('/api/home/dealership/reservation', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ user_id: user_id, dealership_id: dealership_id, start_time: start_time }),
-        })
-
-        if (data.ok) {
-            history.push('/dealerships')
-            // return <Redirect to={'/dealerships'} />
-        }
-
-    }
-
-
-    // useEffect(() => {
-    //   async function getReservations() {
-    //     const response = await fetch('/api/home/dealership/reservation')
-    //     const data = await response.json();
-
-    //     console.log("THIS IS THE RESPONSE", data.reservations)
-    //     setReservations(data.reservations);
-    //   }
-    //   getReservations()
-    // }, [])
-
-
+    // const reservationHandle = () => {
+    //     history.push(`dealership/reservation/${reservation.id}`)
+    // }
 
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <div className="reservation-container">
-                    <div>
-                        <label>User id</label>
-                    </div>
-                    <div>
-                        <input className="reservation-form-input" onChange={handleUserid} value={user_id} type="text" />
-                    </div>
-                </div>
-                <div className="reservation-container">
-                    <div>
-                        <label>Dealership id</label>
-                    </div>
-                    <div>
-                        <input className="reservation-form-input" onChange={handleDealershipid} value={dealership_id} type="text" />
-                    </div>
-                </div>
-                <div className="reservation-container">
-                    <div>
-                        <label>Start Time</label>
-                    </div>
-                    <div>
-                        <input className="reservation-form-input" onChange={handleStartTime} value={start_time} type="text" />
-                    </div>
-                </div>
-            </form>
+            <h1>Your Reservation is confirmed!</h1>
         </>
     )
 }
