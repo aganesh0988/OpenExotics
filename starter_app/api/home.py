@@ -30,7 +30,8 @@ def reservation():
 @bp.route('/dealership/reservation/')
 # @login_required
 def reservation_get():
-    response = Reservation.query.all()
+    # response = Reservation.query.all()
+    response = Reservation.query.order_by(Reservation.id.desc()).limit(1)
     return {'reservations': [reservation.to_dict() for reservation in response]}, 200
 
 
