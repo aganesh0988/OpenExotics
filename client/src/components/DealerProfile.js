@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-// import { Redirect } from 'react-dom';
+
 import { useHistory } from 'react-router-dom'
 import AuthContext from "../auth"
 import './DealerProfile.css'
@@ -24,38 +24,21 @@ const DealerProfile = () => {
     }, [id])
 
 
-    // ;   const [resTime , setResTime] = useState({})
-    const [start_time, setStartTime] = useState("2018-06-12T19:30");
+    const [start_time, setStartTime] = useState();
+    // const [start_time, setStartTime] = useState("2020-12-12T12:00");
 
-
-    // const handleStartTime = (e) => {
-    //     const { id, value } = e.target;
-    //     setStartTime({ ...start_time, [id]: value })
-    // }
-    // const { date, time } = start_time;
-    // const startTime = date + " " + time
-
-    // console.log("STARTTIME", startTime)
 
     const handleStartTime = (e) => {
-        console.log("ETARGET", e.target.value)
         setStartTime(e.target.value)
-        console.log("STARTTIME", start_time)
     }
 
     const handleSubmit = async (e) => {
-
-        // const { date, time } = start_time;
-        // const startTime = new Date(date) + " " + time;
-        console.log("DATA", start_time)
-
 
         e.preventDefault()
         const data = await fetchWithCSRF('/api/home/dealership/reservation', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: start_time }),
-            // body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: startTime })
         })
 
 
@@ -84,24 +67,12 @@ const DealerProfile = () => {
                     <div>
                         <form onSubmit={handleSubmit}>
                             <div className="reservation-container">
-                                <div>
-                                    <label for="meeting-time">Choose a time for your appointment:</label>
-
-                                    <input type="datetime-local" id="meeting-time"
-                                        name="meeting-time" value="2018-06-12T19:30" onChange={handleStartTime}></input>
-                                    {/* <label>Date</label>
-                                    <input type="date" id="date" defaultValue="2020-12-20" onChange={handleStartTime} /> */}
-                                    {/* <div className="reservation-form-input" id="time" onChange={handleStartTime}> */}
-                                    {/* <label htmlFor="time">Time</label>
-                                    <input onChange={handleStartTime}
-                                        label="Time"
-                                        type="time"
-                                        defaultValue="13:00"
-                                    /> */}
-                                    {/* </div> */}
-                                </div>
+                                <label className="meeting-time">Select your meeting time:</label>
+                                <input type="datetime-local" id="meeting-time__input"
+                                    name="meeting-time" onChange={handleStartTime}></input>
+                                <button className='dealerprofile-name-button'>Reserve</button>
+                                <input type="hidden" id="timezone" name="timezone" value="-06:00"></input>
                             </div>
-                            <button className='dealerprofile-name-button'>Reserve</button>
                         </form>
                     </div>
 

@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import './ReservationsPage.css'
 
 const ReservationsPage = () => {
-    // const { reservation } = props;
-    // let history = useHistory()
-
-    // const reservationHandle = () => {
-    //     history.push(`dealership/reservation/${reservation.id}`)
-    // }
-    const history = useHistory()
-    const idString = history.location.pathname.split('/')[2]
-    const id = parseInt(idString, 10)
 
     const [reservations, setReservations] = useState([])
 
@@ -19,7 +10,6 @@ const ReservationsPage = () => {
             const response = await fetch('/api/home/dealership/reservation/')
             const data = await response.json();
 
-            console.log("THIS IS THE RESPONSE", data.reservations)
             setReservations(data.reservations);
         }
         getReservations()
@@ -27,10 +17,13 @@ const ReservationsPage = () => {
 
 
     const reservationsDisp = reservations.map((reservation) =>
-        <div>
-            <h1>Your reservation with {reservation.dealership_name} has been booked!</h1>
-            <div>{reservation.user_id}</div>
-            <div>{reservation.dealership_id}</div>
+        <div key={reservation.id}>
+            {/* might need to remove the key above */}
+            <div className="reservation-page-header">
+                <h1>{reservation.user_name}, your reservation with {reservation.dealership_name} has been confirmed!</h1>
+                <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/images/${reservation.dealership_img}`}></img>
+            </div>
+
             <div>{reservation.start_time}</div>
         </div>)
 

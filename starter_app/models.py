@@ -96,6 +96,7 @@ class Reservation(db.Model):
             "user_id": self.user_id,
             "dealership_id": self.dealership_id,
             "start_time": self.start_time,
+            "user_name": self.user.name,
             "dealership_name": self.dealership.name,
             "dealership_address": self.dealership.address,
             "dealership_city": self.dealership.city,

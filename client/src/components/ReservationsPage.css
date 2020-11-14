@@ -1,0 +1,12 @@
+.reservation-page-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.reservation-page-header-img{
+    width: 50%;
+    margin-top: 30px;
+}

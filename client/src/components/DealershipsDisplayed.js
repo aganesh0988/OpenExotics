@@ -1,8 +1,6 @@
 import React from 'react';
 import './DealershipsDisplayed.css'
 import { useHistory } from 'react-router-dom';
-// import Reservations from './Reservations';
-
 
 
 const DealershipsDisplayed = (props) => {
@@ -21,12 +19,10 @@ const DealershipsDisplayed = (props) => {
                 </div>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>
-                    {/* <div className='dealership-img-name_address'>{dealership.address}</div> */}
                     <div className='dealership-img-name__state'>State:  {dealership.state}</div>
                     <div className='dealership-img-name__city'>City:  {dealership.city}</div>
                     <div className='dealership-img-name__bio' >{dealership.bio}</div>
                     <div className='dealership-img-name__meeting'>Schedule a meeting with a sales associate today!</div>
-                    {/* <button onClick={Reservations}>Reserve</button> */}
                 </div>
             </div>
         </div >

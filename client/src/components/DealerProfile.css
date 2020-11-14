@@ -73,3 +73,21 @@
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+.dealerprofile-name-button:hover{
+    background-color: red;
+}
+
+.reservation-container{
+    margin-top: 20px;
+    color: red;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+}
+
+#meeting-time__input{
+    width: 230px;
+    height: 30px;
+    margin-top: 10px;
+}
