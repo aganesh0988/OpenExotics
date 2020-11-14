@@ -27,7 +27,7 @@ with app.app_context():
     lambo_dal = Dealership(name='Lamborghini Dallas', address='601 S Central Expy', city='Richardson',
                            state='TX', bio='As architect of the largest dealership of its kind in the United States, Lamborghini Dallas is bullish on Lamborghini and its storied pedigree. Carries new and pre-owned Lamborghinis.', img='lambo_dal.png', user_id='1')
     bf_dal = Dealership(name='Boardwalk Ferrari', address='6300 International Pkwy', city='Plano',
-                        state='TX', bio='Ferrari dealership serving the Dallas/Fort Worth area', img='BF.png', user_id='2')
+                        state='TX', bio='With racing events, rallies, concorso and lifestyle events, Boardwalk provides its clients with Ferrari ownership experiences that are second to none. Ferrari dealership serving the Dallas/Fort Worth area', img='BF.png', user_id='2')
     rrmc_dal = Dealership(name='Rolls-Royce Motor Cars Dallas', address='5300 Lemmon Avenue', city='Dallas',
                           state='TX', bio='Rolls-Royce Motor Cars Dallas is dedicated to providing an exceptional customer experience.', img='RRMCD.png', user_id='3')
     am_dal = Dealership(name='Aston Martin Dallas', address='5333 Lemmon Ave', city='Dallas',
