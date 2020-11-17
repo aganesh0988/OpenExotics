@@ -9,7 +9,7 @@ const ReservationsPage = () => {
         async function getReservations() {
             const response = await fetch('/api/home/dealership/reservation/')
             const data = await response.json();
-
+            console.log("STARRRRRTT", data.reservations[0].start_time)
             setReservations(data.reservations);
         }
         getReservations()

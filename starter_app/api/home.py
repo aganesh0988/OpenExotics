@@ -46,5 +46,6 @@ def search_route(search_string):
     response = Dealership.query.filter(
         Dealership.name.ilike(f'%{search_string}%')).limit(15)
     dealership_list = [dealership.id for dealership in response]
-    return jsonify(dealership_list)
-    # return {'dealership': response.to_dict()}
+    # return jsonify(dealership_list)
+    return jsonify({'dealerships': [dealership.to_dict() for dealership in response]})
+    #!!!!!!!!!!!change the dealership.id to be dealership.name or to dict!

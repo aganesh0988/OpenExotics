@@ -6,6 +6,7 @@ import './DealerProfile.css'
 
 const DealerProfile = () => {
     const history = useHistory()
+    console.log("Histpry!!!", history)
     const idString = history.location.pathname.split('/')[2]
     const id = parseInt(idString, 10)
     const { fetchWithCSRF, currentUserId } = useContext(AuthContext);
