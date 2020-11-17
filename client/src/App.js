@@ -86,6 +86,7 @@ function App() {
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
                     <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>
+                    {/* <Route path={`/dealership/${dealership.name}`} exact={true} component={DealerProfile}></Route> */}
                 </Switch>
             </AuthContext.Provider>
         </>

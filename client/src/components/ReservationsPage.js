@@ -15,6 +15,9 @@ const ReservationsPage = () => {
         getReservations()
     }, [])
 
+    // let localT = {{reservation.start_time}}.toLocaleString("en-US", {timeZone: "America/New_York"});
+    // console.log('USA time: '+ (new Date(usaTime)).toISOString())
+
 
     const reservationsDisp = reservations.map((reservation) =>
         <div key={reservation.id}>
@@ -24,7 +27,8 @@ const ReservationsPage = () => {
                 <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/images/${reservation.dealership_img}`}></img>
             </div>
 
-            <div>{reservation.start_time}</div>
+            {/* <div>{reservation.start_time}</div> */}
+            <button>Cancel Reservation</button>
         </div>)
 
     return (
