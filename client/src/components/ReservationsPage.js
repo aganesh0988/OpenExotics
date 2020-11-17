@@ -9,7 +9,6 @@ const ReservationsPage = () => {
         async function getReservations() {
             const response = await fetch('/api/home/dealership/reservation/')
             const data = await response.json();
-            console.log("STARRRRRTT", data.reservations[0].start_time)
             setReservations(data.reservations);
         }
         getReservations()
@@ -21,7 +20,6 @@ const ReservationsPage = () => {
 
     const reservationsDisp = reservations.map((reservation) =>
         <div key={reservation.id}>
-            {/* might need to remove the key above */}
             <div className="reservation-page-header">
                 <h1>{reservation.user_name}, your reservation with {reservation.dealership_name} has been confirmed!</h1>
                 <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/images/${reservation.dealership_img}`}></img>

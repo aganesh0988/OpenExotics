@@ -29,7 +29,6 @@ def reservation():
 @bp.route('/dealership/reservation/')
 # @login_required
 def reservation_get():
-    # response = Reservation.query.all()
     response = Reservation.query.order_by(Reservation.id.desc()).limit(1)
     return {'reservations': [reservation.to_dict() for reservation in response]}, 200
 
@@ -41,11 +40,7 @@ def getDealerProfile(id):
 
 
 @bp.route('/search/<search_string>', methods = ["GET"])
-# @login_required
 def search_route(search_string):
     response = Dealership.query.filter(
         Dealership.name.ilike(f'%{search_string}%')).limit(15)
-    dealership_list = [dealership.id for dealership in response]
-    # return jsonify(dealership_list)
     return jsonify({'dealerships': [dealership.to_dict() for dealership in response]})
-    #!!!!!!!!!!!change the dealership.id to be dealership.name or to dict!

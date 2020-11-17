@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 
 import UserForm from './components/LoginForm';
 import UserList from './components/UsersList';
@@ -36,21 +36,7 @@ function App() {
         }
     }
 
-    // const history = useHistory()
-    // console.log("Histpry!!!", history)
-    // const idString = history.location.pathname.split('/')[2]
-    // const id = parseInt(idString, 10)
 
-    // const [dealerships, setDealership] = useState(id);
-
-    // useEffect(() => {
-    //     async function fetchDealerships() {
-    //         const response = await fetch(`/api/home/dealership/${id}`);
-    //         const responseData = await response.json();
-    //         setDealership(responseData.dealerships);
-    //     }
-    //     fetchDealerships()
-    // }, [id])
 
     useEffect(() => {
 
@@ -102,10 +88,6 @@ function App() {
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
                     <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>
-                    {/* {dealerships.map((dealership) => {
-                        return <Route key={dealership.id} path={`/dealership/${dealership.name}`} component={DealerProfile} />
-                    })} */}
-                    {/* <Route path={`/dealership/${dealership.name}`} exact={true} component={DealerProfile}></Route> */}
                 </Switch>
             </AuthContext.Provider>
         </>
