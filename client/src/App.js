@@ -72,18 +72,16 @@ function App() {
     return (
         <>
             <AuthContext.Provider value={authContextValue}>
-                {location.pathname !== '/login' && location.pathname !== '/signup' ?
+                {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/' ?
                     <Navigation />
                     : null}
                 <Switch>
                     <Route path="/users">
                         <UserList />
                     </Route>
+                    <Route path="/" exact={true} component={UserForm}></Route>
                     <Route path="/login" component={UserForm}></Route>
                     <Route path="/signup" component={SignUp}></Route>
-                    {/* <Route path="/">
-                        <Dealerships />
-                    </Route> */}
                     <Route path="/dealership/reservation" component={ReservationsPage}></Route>
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>

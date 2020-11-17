@@ -22,7 +22,7 @@ const ReservationsPage = () => {
         <div key={reservation.id}>
             <div className="reservation-page-header">
                 <h1>{reservation.user_name}, your reservation with {reservation.dealership_name} has been confirmed!</h1>
-                <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/images/${reservation.dealership_img}`}></img>
+                <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/static/images/${reservation.dealership_img}`}></img>
             </div>
 
             {/* <div>{reservation.start_time}</div> */}
