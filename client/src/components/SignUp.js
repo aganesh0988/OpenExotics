@@ -11,6 +11,8 @@ function SignUp(props) {
     const { fetchWithCSRF } = useContext(AuthContext);
     const [errors, setErrors] = useState([])
 
+    console.log("hello")
+
     let history = useHistory();
 
     const handleUsername = (e) => {
