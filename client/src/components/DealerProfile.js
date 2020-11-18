@@ -56,7 +56,7 @@ const DealerProfile = () => {
             </h1>
             <div className='dealerprofile-img-text-wrapper'>
                 <div className='dealerprofile-name-img-wrapper'>
-                    <img alt={dealership.name} className='dealerprofile-name-img-img' src={`/static/images/${dealership.img}`}></img>
+                    <img alt={dealership.name} className='dealerprofile-name-img-img' src={`/images/${dealership.img}`}></img>
                 </div>
                 <div className='dealerprofile-name-img-text-wrapper' >
                     <h4 className='dealerprofile-name-address-title'>Located At:</h4>

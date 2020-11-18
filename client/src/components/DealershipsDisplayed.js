@@ -15,7 +15,7 @@ const DealershipsDisplayed = (props) => {
         <div className='dealership-img-wrapper'>
             <div className='dealership-img-container' onClick={dealershipHandle}>
                 <div className="dealership-img-img_container">
-                    <img alt={dealership.name} className='dealership-img-img' src={`/static/images/${dealership.img}`}></img>
+                    <img alt={dealership.name} className='dealership-img-img' src={`/images/${dealership.img}`}></img>
                 </div>
                 <div className='dealership-img-name'>
                     <h4 className='dealership-img-name__name'>{dealership.name}</h4>

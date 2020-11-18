@@ -39,7 +39,7 @@ function UserForm(props) {
     }
     return (
         <div className="login-form-container-main">
-            <img alt='OELogoW' className='OELogoW' src='/static/images/OEWhite.jpg' />
+            <img alt='OELogoW' className='OELogoW' src='/images/OEWhite.jpg' />
             <div className="login-form-container">
                 <h1 className="login-form-title">Login</h1>
                 <form className="login-form">
