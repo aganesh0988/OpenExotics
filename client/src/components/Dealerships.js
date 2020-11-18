@@ -9,7 +9,7 @@ const Dealerships = () => {
 
   useEffect(() => {
     async function getDealerships() {
-      const response = await fetch('/api/home')
+      const response = await fetch('/api/home/')
       const data = await response.json();
 
       setDealerships(data.dealerships);

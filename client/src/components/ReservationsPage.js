@@ -14,9 +14,16 @@ const ReservationsPage = () => {
         getReservations()
     }, [])
 
-    // let localT = {{reservation.start_time}}.toLocaleString("en-US", {timeZone: "America/New_York"});
+    //     let localT = {{ reservation.start_time }}.toLocaleString("en-US", { timeZone: "America/New_York" });
     // console.log('USA time: '+ (new Date(usaTime)).toISOString())
-
+    const convdate = (time) => {
+        // const date = new Date(time.toString())
+        // return date.toString()
+        const date = new Date(time.toString())
+        const dateDate = date.toString()
+        const minusEnd = dateDate.substring(0, dateDate.indexOf(':00'))
+        return minusEnd
+    }
 
     const reservationsDisp = reservations.map((reservation) =>
         <div key={reservation.id}>
@@ -25,8 +32,8 @@ const ReservationsPage = () => {
                 <img alt={reservation.dealership_img} className='reservation-page-header-img' src={`/images/${reservation.dealership_img}`}></img>
             </div>
 
-            {/* <div>{reservation.start_time}</div> */}
-            <button>Cancel Reservation</button>
+            <div className="reservation-page__time">Reservation to meet with a sales associate is set for: {convdate(reservation.start_time)}</div>
+            <button className="reservation-page__cancel button">Cancel Reservation</button>
         </div>)
 
     return (

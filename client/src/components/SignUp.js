@@ -11,8 +11,6 @@ function SignUp(props) {
     const { fetchWithCSRF } = useContext(AuthContext);
     const [errors, setErrors] = useState([])
 
-    console.log("hello")
-
     let history = useHistory();
 
     const handleUsername = (e) => {
@@ -40,9 +38,7 @@ function SignUp(props) {
         })
 
         if (data.ok) {
-            console.log("data ok")
             history.push('/dealerships')
-            // return <Redirect to={'/'} />
         }
         else {
             const response = await data.json();
