@@ -5,7 +5,7 @@ from flask_login import current_user, login_required
 bp = Blueprint("home", __name__)
 
 
-@login_required
+# @login_required
 @bp.route('/')
 def getDealerships():
     response = Dealership.query.order_by(Dealership.name).all()
@@ -17,7 +17,6 @@ def getDealerships():
 def reservation():
     user_id = request.json.get("user_id", None)
     dealership_id = request.json.get("dealership_id", None)
-    print("PRINT!!!!!!!!!", dealership_id, user_id)
     start_time = request.json.get("start_time", None)
     new_reservation = Reservation(
         user_id=user_id, dealership_id=dealership_id, start_time=start_time)
