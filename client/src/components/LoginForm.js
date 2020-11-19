@@ -29,7 +29,9 @@ function UserForm(props) {
 
             const responseData = await response.json();
             if (!response.ok) {
-                setErrors(responseData.errors);
+                const { errors } = responseData
+                setErrors(errors);
+                // setErrors(responseData.errors);
             } else {
                 setCurrentUserId(responseData.current_user_id)
                 history.push('/dealerships')
@@ -43,15 +45,24 @@ function UserForm(props) {
             <div className="login-form-container">
                 <h1 className="login-form-title">Login</h1>
                 <form className="login-form">
-                    {errors.length ? errors.map((err) => <li key={err} >{err}</li>) : ''}
                     <div className="field">
                         <label>Username: </label>
                         <div className="control">
                             <input className="form-input input" type="text" value={username} onChange={(e) => setUsername(e.target.value)} name="username" />
                         </div>
+                        <div className="errors-div">
+                            {errors && errors.username && errors.username.map(error =>
+                                <p>{error}</p>
+                            )}
+                        </div>
                         <label>Password: </label>
                         <div className="control">
                             <input className="form-input input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" />
+                        </div>
+                        <div className="errors-div">
+                            {errors && errors.password && errors.password.map(error =>
+                                <p>{error}</p>
+                            )}
                         </div>
                     </div>
                     <div className="login-username-submit-container">

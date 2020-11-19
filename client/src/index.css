@@ -18,7 +18,7 @@
 }
 
 .navlink-container {
-    width: 400px;
+    width: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -33,6 +33,7 @@ a.active-nav{
     text-decoration: none;
     font-variant: small-caps;
     font-size: large;
+    color: white;
 }
 
 .OELogo-nav{
@@ -75,4 +76,8 @@ iframe{
     width: auto;
     margin-top: -70px;
     margin-bottom: -70px;
+}
+
+.navlink-container__search{
+    height: 50px;
 }

@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 from starter_app.models import Dealership, Reservation, User, db
 from flask_login import current_user, login_required
+from starter_app.forms import ResForm
 
 bp = Blueprint("home", __name__)
 
@@ -15,14 +16,17 @@ def getDealerships():
 @bp.route('/dealership/reservation', methods=["POST"])
 # @login_required
 def reservation():
-    user_id = request.json.get("user_id", None)
-    dealership_id = request.json.get("dealership_id", None)
-    start_time = request.json.get("start_time", None)
-    new_reservation = Reservation(
-        user_id=user_id, dealership_id=dealership_id, start_time=start_time)
-    db.session.add(new_reservation)
-    db.session.commit()
-    return {'reservation': new_reservation.to_dict()}, 200
+    res_form = ResForm()
+    if res_form.validate():
+        data = request.get_json()
+        new_res = Reservation(user_id=data["user_id"],
+                            dealership_id=data["dealership_id"],
+                            start_time=data["start_time"])
+        db.session.add(new_res)
+        db.session.commit()
+        return {'reservation': new_res.to_dict()}, 200
+    else:
+        return jsonify(success=False, errors=res_form.errors), 400
 
 
 @bp.route('/dealership/reservation/')
@@ -32,9 +36,13 @@ def reservation_get():
     return {'reservations': [reservation.to_dict() for reservation in response]}, 200
 
 
-# @bp.route('/dealership/reservation/<int:id>', methods=["DELETE"])
-# def cancel_reservation(id):
-#     response = Reservation.query.order_by(Reservation.id.desc()).limit(1)
+@bp.route('/dealership/reservation/<int:resId>', methods=["DELETE"])
+def cancel_reservation(resId):
+    # response = Reservation.query.get(id)
+    reservation = Reservation.query.filter_by(id=resId).first()
+    db.session.delete(reservation)
+    db.session.commit()
+    return {}, 200
 
 
 

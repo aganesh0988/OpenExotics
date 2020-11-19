@@ -5,6 +5,7 @@
 - [ ] Login / user auth
 - [ ] Dealerships page
 - [ ] Reservations
+- [ ] Search
 - [ ] Signup
 Bonus:
 - [ ] Ratings/reviews

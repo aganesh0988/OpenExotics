@@ -7,6 +7,24 @@
 }
 
 .reservation-page-header-img{
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
+}
+
+.reservation-page__cancel-button{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 40px;
+    width: 200px;
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+    border-radius: 5px;
+    text-shadow: 0 0  black;
+
+}
+
+.reservation-page__cancel-button:hover{
+    background-color: red;
+    color: black;
 }

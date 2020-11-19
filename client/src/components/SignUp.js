@@ -62,7 +62,7 @@ function SignUp(props) {
                             <input className="form-input" onChange={handleName} value={name} type="name" />
                         </div>
                         <div className="errors-div">
-                            {errors && errors.confirm && errors.confirm.map(error =>
+                            {errors && errors.name && errors.name.map(error =>
                                 <p>{error}</p>
                             )}
                         </div>

@@ -11,6 +11,7 @@ const DealerProfile = () => {
     const { fetchWithCSRF, currentUserId } = useContext(AuthContext);
 
     const [dealership, setDealership] = useState(id);
+    const [errors, setErrors] = useState([]);
 
     useEffect(() => {
 
@@ -33,17 +34,18 @@ const DealerProfile = () => {
     }
 
     const handleSubmit = async (e) => {
-
         e.preventDefault()
         const data = await fetchWithCSRF('/api/home/dealership/reservation', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: start_time }),
         })
-
-
+        const response = await data.json();
         if (data.ok) {
             history.push(`/dealership/reservation`)
+        } else {
+            const { errors } = response
+            setErrors(errors)
         }
     }
 
@@ -69,7 +71,12 @@ const DealerProfile = () => {
                             <div className="reservation-container">
                                 <label className="meeting-time">Select your meeting time:</label>
                                 <input type="datetime-local" id="meeting-time__input"
-                                    name="meeting-time" onChange={handleStartTime}></input>
+                                    name="meeting-time" onChange={handleStartTime} ></input>
+                                <div className="reservation-errors-div">
+                                    {errors && errors.start_time && errors.start_time.map(error =>
+                                        <p key={errors}>{error}</p>
+                                    )}
+                                </div>
                                 <button className='dealerprofile-name-button'>Reserve</button>
                                 <input type="hidden" id="timezone" name="timezone" value="-06:00"></input>
                             </div>

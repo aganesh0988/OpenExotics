@@ -31,8 +31,14 @@
     margin: 5px;
     background-color: lightgray;
     border: 1px solid lightgray;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 5px;
+}
+
+.errors-div>p{
+    color: red;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 /* .sign-up-container > {

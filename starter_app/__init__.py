@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, session, Blueprint
+from flask import Flask, render_template, request, session, Blueprint, jsonify
 from flask_cors import CORS
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_migrate import Migrate
@@ -7,8 +7,9 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 
 
 from starter_app.models import db, User, Dealership, Reservation
+from starter_app.forms import LoginForm
 from starter_app.api.user_routes import user_routes
-from starter_app.api.auth_routes import auth_routes
+# from starter_app.api.auth_routes import auth_routes
 # from starter_app.api.home import dealerships
 from starter_app.api import home
 
@@ -18,7 +19,7 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
-app.register_blueprint(auth_routes, url_prefix='/api/auth')
+# app.register_blueprint(auth_routes, url_prefix='/api/auth')
 # app.register_blueprint(dealerships, url_prefix='/api/dealerships')
 app.register_blueprint(home.bp, url_prefix='/api/home')
 db.init_app(app)
@@ -57,23 +58,16 @@ def restore_csrf():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if not request.is_json:
-        return jsonify({"msg": "Missing JSON in request"}), 400
-
-    username = request.json.get('username', None)
-    password = request.json.get('password', None)
-
-    if not username or not password:
-        return {"errors": ["Missing required parameters"]}, 400
-
-    authenticated, user = User.authenticate(username, password)
-    print(authenticated)
-    print(user)
-    if authenticated:
-        login_user(user)
-        return {"current_user_id": current_user.id, "current_username": username}, 200
-
-    return {"errors": ["Invalid username or password"]}, 401
+    login_form = LoginForm()
+    if login_form.validate():
+        username = request.json.get('username', None)
+        password = request.json.get('password', None)
+        access_token, user = User.authenticate(username, password)
+        if access_token:
+            return {"access_token": access_token}, 200
+    else:
+        return jsonify(success=False, errors=login_form.errors), 400
+    return jsonify('ok')
 
 
 @app.route('/logout', methods=['POST'])
@@ -81,23 +75,3 @@ def login():
 def logout():
     logout_user()
     return {'msg': 'You have been logged out'}, 200
-
-
-# @app.after_request
-# def inject_csrf_token(response):
-#     response.set_cookie('csrf_token',
-#                         generate_csrf(),
-#                         secure=True if os.environ.get('FLASK_ENV') else False,
-#                         samesite='Strict' if os.environ.get(
-#                             'FLASK_ENV') else None,
-#                         httponly=True)
-#     return response
-
-
-# @app.route('/', defaults={'path': ''})
-# @app.route('/<path:path>')
-# def react_root(path):
-#     print("path", path)
-#     if path == 'favicon.ico':
-#         return app.send_static_file('favicon.ico')
-#     return app.send_static_file('index.html')
