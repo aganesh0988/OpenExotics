@@ -80,7 +80,7 @@ function App() {
                         <UserList />
                     </Route>
                     <Route path="/" exact={true} component={UserForm}></Route>
-                    <Route path="/login" exact={true} component={UserForm}></Route>
+                    <Route path="/login" component={UserForm}></Route>
                     <Route path="/signup" exact={true} component={SignUp}></Route>
                     <Route path="/dealership/reservation" component={ReservationsPage}></Route>
                     <Route path="/dealerships" component={Dealerships}></Route>
