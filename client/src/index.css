@@ -14,7 +14,6 @@
     border-top: 10px double red;
     border-bottom: 10px double red;
     margin-bottom: 30px;
-    /* background-color: black; */
 }
 
 .navlink-container {
@@ -29,6 +28,11 @@ a:visited{
     text-decoration: none;
     font-variant: small-caps;
 }
+
+.navlink-container__search-choices-div>a{
+    text-decoration: none;
+}
+
 a.active-nav{
     text-decoration: none;
     font-variant: small-caps;
