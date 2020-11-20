@@ -111,7 +111,7 @@ function SignUp(props) {
                     </div>
                     <div>
                         <div>Already a member?</div>
-                        <a href="/login">Log In</a>
+                        <a href="/">Log In</a>
                     </div>
                 </form>
             </div>

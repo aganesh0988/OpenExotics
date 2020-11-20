@@ -28,12 +28,13 @@ function UserForm(props) {
             });
 
             const responseData = await response.json();
+            console.log("FFFFFF", responseData.current_user_id)
             if (!response.ok) {
                 const { errors } = responseData
                 setErrors(errors);
                 // setErrors(responseData.errors);
             } else {
-                setCurrentUserId(responseData.current_user_id)
+                // setCurrentUserId(responseData)
                 history.push('/dealerships')
             }
         }

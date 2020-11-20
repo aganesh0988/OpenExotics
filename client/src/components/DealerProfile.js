@@ -8,7 +8,7 @@ const DealerProfile = () => {
     const history = useHistory()
     const idString = history.location.pathname.split('/')[2]
     const id = parseInt(idString, 10)
-    const { fetchWithCSRF, currentUserId } = useContext(AuthContext);
+    const { fetchWithCSRF, currentUserId, setCurrentUserId } = useContext(AuthContext);
 
     const [dealership, setDealership] = useState(id);
     const [errors, setErrors] = useState([]);
@@ -41,11 +41,12 @@ const DealerProfile = () => {
             body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: start_time }),
         })
         const response = await data.json();
-        if (data.ok) {
-            history.push(`/dealership/reservation`)
-        } else {
+        if (!data.ok) {
             const { errors } = response
             setErrors(errors)
+        } else {
+            // setCurrentUserId(response.user_id)
+            history.push(`/dealership/reservation`)
         }
     }
 
