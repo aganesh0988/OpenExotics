@@ -10,7 +10,7 @@ function UserForm(props) {
     let history = useHistory();
 
     const [errors, setErrors] = useState([]);
-    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
+    const { fetchWithCSRF } = useContext(AuthContext);
     const submitForm = (e) => {
         e.preventDefault();
 
@@ -28,7 +28,6 @@ function UserForm(props) {
             });
 
             const responseData = await response.json();
-            console.log("FFFFFF", responseData.current_user_id)
             if (!response.ok) {
                 const { errors } = responseData
                 setErrors(errors);

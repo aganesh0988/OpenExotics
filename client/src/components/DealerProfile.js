@@ -8,7 +8,7 @@ const DealerProfile = () => {
     const history = useHistory()
     const idString = history.location.pathname.split('/')[2]
     const id = parseInt(idString, 10)
-    const { fetchWithCSRF, currentUserId, setCurrentUserId } = useContext(AuthContext);
+    const { fetchWithCSRF, currentUserId } = useContext(AuthContext);
 
     const [dealership, setDealership] = useState(id);
     const [errors, setErrors] = useState([]);
