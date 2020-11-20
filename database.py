@@ -40,6 +40,10 @@ with app.app_context():
                              state='TX', bio='We are the number one pre-owned Porsche dealer in the country, your ownership experience is our number one priority. The largest inventory of new and pre-owned Porsches in North America including the 911, Cayman, Cayenne, Taycan, Panamera, and Macan.', img='porsche_dal.png', user_id='1')
     pomc_hou = Dealership(name='Post Oak Motor Cars', address='1530 W. Loop South', city='Houston',
                           state='TX', bio="A New Experience Awaits You at Post Oak Motor Cars, a Tilman Fertitta company and home to Houston's only authorized Bentley dealership, Texas' only Bugatti and Karma dealership and the Gulf Coast largest authorized Rolls-Royce dealership.", img='pomc_hou.png', user_id='1')
+    mgbh_bh = Dealership(name='Marshall Goldman, Beverly Hills', address='8825 Wilshire Boulevard', city='Beverly Hills',
+                          state='CA', bio="We are automotive enthusiasts, and take pride in our knowledge and market insight. When you are shopping for your next collectible, exotic or luxury vehicle, you should work with people who have the best understanding of these cars and markets.", img='mgbh.png', user_id='1')
+    fsa_sa = Dealership(name='Ferrari of San Antonio', address='19302 19302 West Interstate 10', city='San Antonio',
+                          state='TX', bio="We are the official Ferrari dealer of San Antonio. Come in and check out our extensive inventory.", img='fsa.png', user_id='1')
 
     reservation1 = Reservation(
         user_id=1, dealership_id=1, start_time=date(2020, 12, 20))
@@ -59,6 +63,8 @@ with app.app_context():
     db.session.add(p_dal)
     db.session.add(porsche_dal)
     db.session.add(pomc_hou)
+    db.session.add(mgbh_bh)
+    db.session.add(fsa_sa)
     db.session.add(reservation1)
 
     db.session.commit()
