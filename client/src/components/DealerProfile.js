@@ -26,8 +26,6 @@ const DealerProfile = () => {
 
 
     const [start_time, setStartTime] = useState();
-    // const [start_time, setStartTime] = useState("2020-12-12T12:00");
-
 
     const handleStartTime = (e) => {
         setStartTime(e.target.value)
@@ -41,11 +39,13 @@ const DealerProfile = () => {
             body: JSON.stringify({ user_id: currentUserId, dealership_id: id, start_time: start_time }),
         })
         const response = await data.json();
+
+
         if (!data.ok) {
             const { errors } = response
             setErrors(errors)
+            console.log("ERRORSS", errors)
         } else {
-            // setCurrentUserId(response.user_id)
             history.push(`/dealership/reservation`)
         }
     }

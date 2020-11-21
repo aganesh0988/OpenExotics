@@ -18,7 +18,6 @@ function App() {
 
     const [fetchWithCSRF, setFetchWithCSRF] = useState(() => fetch);
     const [currentUserId, setCurrentUserId] = useState(null);
-    // const [loading, setLoading] = useState(true);
 
     const authContextValue = {
         fetchWithCSRF,
@@ -63,7 +62,6 @@ function App() {
                     setCurrentUserId(authData.current_user_id)
                 }
             }
-            // setLoading(false)
         }
         restoreCSRF();
     }, []);
@@ -82,7 +80,7 @@ function App() {
                     <Route path="/" exact={true} component={UserForm}></Route>
                     <Route path="/login" component={UserForm}></Route>
                     <Route path="/signup" exact={true} component={SignUp}></Route>
-                    <Route path="/dealership/reservation" component={ReservationsPage}></Route>
+                    <Route path="/dealership/reservation" exact={true} component={ReservationsPage}></Route>
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
                     <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>

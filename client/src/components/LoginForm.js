@@ -10,7 +10,7 @@ function UserForm(props) {
     let history = useHistory();
 
     const [errors, setErrors] = useState([]);
-    const { fetchWithCSRF } = useContext(AuthContext);
+    const { fetchWithCSRF, setCurrentUserId } = useContext(AuthContext);
     const submitForm = (e) => {
         e.preventDefault();
 
@@ -28,12 +28,13 @@ function UserForm(props) {
             });
 
             const responseData = await response.json();
+
             if (!response.ok) {
                 const { errors } = responseData
                 setErrors(errors);
                 // setErrors(responseData.errors);
             } else {
-                // setCurrentUserId(responseData)
+                setCurrentUserId(responseData.current_user_id)
                 history.push('/dealerships')
             }
         }

@@ -63,8 +63,11 @@ def login():
         username = request.json.get('username', None)
         password = request.json.get('password', None)
         access_token, user = User.authenticate(username, password)
+        # if access_token:
+        #     return {"access_token": access_token}, 200
         if access_token:
-            return {"access_token": access_token}, 200
+            login_user(user)
+            return {"current_user_id": current_user.id, "current_username": username}, 200
     else:
         return jsonify(success=False, errors=login_form.errors), 400
     return jsonify('ok')
