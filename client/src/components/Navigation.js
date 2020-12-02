@@ -23,7 +23,9 @@ const Navigation = props => {
     return (
         <>
             <header className='navigation-container'>
-                <img alt='OELogo' className='OELogo-nav' src='/images/OEWhite.jpg' />
+                <NavLink to='/dealerships'>
+                    <img alt='OELogo' className='OELogo-nav' src='/images/OEWhite.jpg' />
+                </NavLink>
                 <div className="navlink-container">
                     <div className="navlink-container__search">
                         <input type="search" onChange={handleSearch} value={input} placeholder="Search" autoComplete="off"></input>
