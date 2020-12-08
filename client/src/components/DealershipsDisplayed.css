@@ -10,6 +10,10 @@
     border: white solid 4px;
 }
 
+.dealership-img-container:hover{
+    cursor: pointer;
+}
+
 .dealership-img-name{
     margin-left: 40px;
 }
