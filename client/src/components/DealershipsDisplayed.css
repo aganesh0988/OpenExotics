@@ -12,7 +12,17 @@
 
 .dealership-img-container:hover{
     cursor: pointer;
+    transition: 0.3s;
+    background-color: red;
+    color: white;
 }
+
+.dealership-img-container:hover div{
+    color: white;
+}
+/* .dealership-img-name__meeting:hover>{
+    columns: white;
+} */
 
 .dealership-img-name{
     margin-left: 40px;
