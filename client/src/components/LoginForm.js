@@ -72,7 +72,7 @@ function UserForm(props) {
                     <div className="login-signup">
                         <span>
                             <span>Not a member?  </span>
-                            <a href="/signup"> Sign up</a>
+                            <a className="login-signup-links" href="/signup"> Sign up</a>
                         </span>
                     </div>
                 </form>

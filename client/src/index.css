@@ -10,6 +10,16 @@ html, body, .navlink-container{
     font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
 }
 
+a.login-signup-links{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.login-signup-links:hover{
+    transition: 0.3s;
+    color: red;
+}
+
 .navigation-container{
     display: flex;
     flex-direction: row;
@@ -146,8 +156,8 @@ iframe{
     color: white;
     letter-spacing: 1.5px;
     background-color:black;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    /* border-top: 5px solid black;
+    border-bottom: 5px solid black; */
 
   }
 
