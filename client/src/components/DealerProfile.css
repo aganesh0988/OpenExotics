@@ -77,6 +77,7 @@
 
 .dealerprofile-name-button:hover{
     background-color: red;
+    transition: 0.3s;
 }
 
 .reservation-container{

@@ -36,6 +36,11 @@ html, body, .navlink-container{
     align-items: center;
 }
 
+.active-nav:hover{
+    transition: 0.3s;
+    color: red;
+}
+
 a:visited{
     color: white;
     text-decoration: none;
@@ -126,6 +131,7 @@ iframe{
 
 .navlink-container__search-options:hover{
     color: red;
+    transition: 0.3s;
 }
 
 
@@ -173,4 +179,5 @@ iframe{
 
   a.footer-container__elements-icons:hover{
     color: white;
+    transition: 0.3s;
   }
