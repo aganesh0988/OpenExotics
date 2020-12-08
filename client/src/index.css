@@ -13,11 +13,17 @@ html, body, .navlink-container{
 a.login-signup-links{
     font-weight: bold;
     text-decoration: none;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 a.login-signup-links:hover{
     transition: 0.3s;
     color: red;
+    text-shadow: 0 0 0;
+}
+
+.login-signup-text{
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .navigation-container{

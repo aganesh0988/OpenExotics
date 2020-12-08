@@ -71,7 +71,7 @@ function UserForm(props) {
                     </div>
                     <div className="login-signup">
                         <span>
-                            <span>Not a member?  </span>
+                            <span className="login-signup-text">Not a member?  </span>
                             <a className="login-signup-links" href="/signup"> Sign up</a>
                         </span>
                     </div>

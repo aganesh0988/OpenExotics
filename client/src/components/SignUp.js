@@ -110,7 +110,7 @@ function SignUp(props) {
                         <button className="forms-button" variant="contained" color="primary" type="submit" >Signup</button>
                     </div>
                     <div>
-                        <div>Already a member?</div>
+                        <div className="login-signup-text">Already a member?</div>
                         <a className="login-signup-links" href="/">Log In</a>
                     </div>
                 </form>
