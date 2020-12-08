@@ -29,9 +29,11 @@ html, body, .navlink-container{
 
 .navlink-container {
     width: 500px;
+    height: 50px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-around;
+    align-items: center;
 }
 
 a:visited{
@@ -40,9 +42,6 @@ a:visited{
     font-variant: small-caps;
 }
 
-.navlink-container__search-choices-div>a{
-    text-decoration: none;
-}
 
 a.active-nav{
     text-decoration: none;
@@ -52,6 +51,8 @@ a.active-nav{
 }
 
 .OELogo-nav{
+    display: flex;
+    align-items: center;
     height: 125px;
     width: auto;
     justify-content: start;
@@ -94,5 +95,35 @@ iframe{
 }
 
 .navlink-container__search{
-    height: 50px;
+    background-color: black;
+    display: block;
+}
+
+.navlink-container__search-input{
+    display: block;
+    position: static;
+}
+
+.navlink-container__search-choices-div>a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white;
+}
+
+.navlink-container__search-choices{
+    background-color: black;
+    position: absolute;
+}
+
+.navlink-container__search-choices-div{
+    margin: 5px;
+    background-color: black;
+}
+
+.navlink-container__search-options{
+    background-color: black;
+    margin-top: 20px;
+}
+
+.navlink-container__search-options:hover{
+    color: red;
 }

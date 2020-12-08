@@ -28,11 +28,13 @@ const Navigation = props => {
                 </NavLink>
                 <div className="navlink-container">
                     <div className="navlink-container__search">
-                        <input type="search" onChange={handleSearch} value={input} placeholder="Search" autoComplete="off"></input>
+                        <div className="navlink-container__search-input">
+                            <input type="search" onChange={handleSearch} value={input} placeholder="Search" autoComplete="off"></input>
+                        </div>
                         <div className="navlink-container__search-choices">
                             {options ? options.map(option =>
                                 <div className="navlink-container__search-choices-div" key={option.id}>
-                                    <a href={`/dealership/${option.id}`}>{option.name}</a>
+                                    <a className="navlink-container__search-options" href={`/dealership/${option.id}`}>{option.name}</a>
                                 </div>
                             ) : null}
                         </div>
