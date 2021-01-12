@@ -149,7 +149,8 @@ git clone https://github.com/appacademy-starters/react-project-starter.git --bra
 
 
 <br />
--------------
+
+-----------------------
 
 ## Contact
 
