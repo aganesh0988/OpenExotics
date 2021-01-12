@@ -1,4 +1,4 @@
-# OpenExotics
+# Open Exotics
 
 # Features - MVP
 -----------------
