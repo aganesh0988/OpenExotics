@@ -6,8 +6,23 @@ I developed this app based off of Open Table, but with an exotic car twist. A us
 
 ## Built With
 I developed this full-stack application using a JavaScript / React frontend and a Python / Flask backend.
-*[React](https://reactjs.org/)
-*[Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [React](https://reactjs.org/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [WTForms](https://wtforms.readthedocs.io/en/2.3.x/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [SQLAlchemy](https://www.sqlalchemy.org/)
+* [Alembic](https://alembic.sqlalchemy.org/en/latest/)
+
+<br />
+
+Deployed with:
+* [Heroku](https://www.heroku.com/)
+
+Packaged with:
+* [Docker](https://www.docker.com/)
+
+<br />
+
 
 ----------------
 
