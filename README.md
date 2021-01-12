@@ -2,6 +2,14 @@
 
 ## About The Project
 I developed this app based off of Open Table, but with an exotic car twist. A user can browse through different exotic car dealerships to set up a meeting with a sales associate.
+<br />
+
+## Built With
+I developed this full-stack application using a JavaScript / React frontend and a Python / Flask backend.
+*[React](https://reactjs.org/)
+*[Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+----------------
 
 ## Features - MVP
 - [ ] Login / user auth
