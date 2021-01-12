@@ -146,3 +146,15 @@ git clone https://github.com/appacademy-starters/react-project-starter.git --bra
    ```
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
 11. profit
+
+
+<br />
+-------------
+
+## Contact
+
+Andrea Jackson - [@andrea-jackson1](https://www.linkedin.com/in/andrea-jackson1/) - andreajackson1109@gmail.com
+
+Project Link: [https://github.com/aganesh0988/OpenExotics](https://github.com/aganesh0988/OpenExotics)
+
+Portfolio: [https://andreagjackson.com/](https://andreagjackson.com/)
