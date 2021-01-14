@@ -24,6 +24,8 @@ Packaged with:
 <br />
 
 
+![Home Page for Open Exotics.](https://i.gyazo.com/c9978d9180b8fb77f0731f4e81eb25cd.png)
+
 ----------------
 
 ## Features - MVP
@@ -52,11 +54,6 @@ Bonus:
    - user_id (FK)
    - dealership_id (FK)
    - start_time
-
-<br />
-
-![Home Page for Open Exotics.](https://i.gyazo.com/c9978d9180b8fb77f0731f4e81eb25cd.png)
-
 
 
 <br />
