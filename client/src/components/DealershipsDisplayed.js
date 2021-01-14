@@ -22,7 +22,7 @@ const DealershipsDisplayed = (props) => {
                     <div className='dealership-img-name__state'>State:  {dealership.state}</div>
                     <div className='dealership-img-name__city'>City:  {dealership.city}</div>
                     <div className='dealership-img-name__bio' >{dealership.bio}</div>
-                    <div className='dealership-img-name__meeting'>Schedule a meeting with a sales associate today!</div>
+                    <div className='dealership-img-name__meeting'>Click here to schedule a meeting with a sales associate today!</div>
                 </div>
             </div>
         </div >
