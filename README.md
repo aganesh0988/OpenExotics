@@ -9,23 +9,20 @@ I developed this full-stack application using a JavaScript / React frontend and 
 
 <img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
 <img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png">
-<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
 <img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
 <img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png">
-<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png">
-<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png">
 <img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png">
 <img align="left" height="20" src="https://wtforms.readthedocs.io/en/stable/_static/wtforms.png">
 
 
 <br />
 
-* [React](https://reactjs.org/)
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-* [WTForms](https://wtforms.readthedocs.io/en/2.3.x/)
-* [PostgreSQL](https://www.postgresql.org/)
-* [SQLAlchemy](https://www.sqlalchemy.org/)
-* [Alembic](https://alembic.sqlalchemy.org/en/latest/)
+* [<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">](https://reactjs.org/) [React](https://reactjs.org/)
+* [<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png">](https://flask.palletsprojects.com/en/1.1.x/) [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [<img align="left" height="20" src="https://wtforms.readthedocs.io/en/stable/_static/wtforms.png">](https://wtforms.readthedocs.io/en/2.3.x/)[WTForms](https://wtforms.readthedocs.io/en/2.3.x/)
+* [<img align="left" height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png">](https://www.postgresql.org/) [PostgreSQL](https://www.postgresql.org/)
+* [<img align="left" height="20" src="https://www.sqlalchemy.org/img/sqla_logo.png">](https://www.sqlalchemy.org/) [SQLAlchemy](https://www.sqlalchemy.org/)
+* [<img align="left" height="20" src="https://pypi.org/static/images/logo-small.6eef541e.svg">](https://alembic.sqlalchemy.org/en/latest/) [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 
 
 <br />
