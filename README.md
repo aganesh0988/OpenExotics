@@ -1,5 +1,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Portfolio][portfolio-shield]][portfolio-url]
+[![Live Link][live-link-shield]][live-link-url]
 
 
 <p align="center">
@@ -192,3 +193,5 @@ Project Link: [https://github.com/aganesh0988/OpenExotics](https://github.com/ag
 [linkedin-url]: https://www.linkedin.com/in/andrea-jackson1/
 [portfolio-shield]: https://img.shields.io/badge/-Portfolio-red?style=for-the-badge&logo=red
 [portfolio-url]:https://andreagjackson.com/
+[live-link-shield]: https://img.shields.io/badge/-LiveLink-red?style=for-the-badge&logo=red
+[live-link-url]: https://openexotics.herokuapp.com/
