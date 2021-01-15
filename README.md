@@ -170,6 +170,8 @@ git clone https://github.com/appacademy-starters/react-project-starter.git --bra
 
 Andrea Jackson - [@andrea-jackson1](https://www.linkedin.com/in/andrea-jackson1/) - andreajackson1109@gmail.com
 
+Live Link: [https://openexotics.herokuapp.com/](https://openexotics.herokuapp.com/)
+
 Project Link: [https://github.com/aganesh0988/OpenExotics](https://github.com/aganesh0988/OpenExotics)
 
 Portfolio: [https://andreagjackson.com/](https://andreagjackson.com/)
