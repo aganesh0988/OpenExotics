@@ -1,4 +1,8 @@
-# Open Exotics
+<p align="center">
+  <a target="_blank" href="https://openexotics.herokuapp.com/">
+    <img src="client/public/images/OEWhite.jpg" alt="UPWARDLogo" height="100">
+  </a>
+</p>
 
 ## About The Project
 I developed this app based off of Open Table, but with an exotic car twist. A user can browse through different exotic car dealerships to set up a meeting with a sales associate.
