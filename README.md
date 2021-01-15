@@ -1,3 +1,6 @@
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
 <p align="center">
   <a target="_blank" href="https://openexotics.herokuapp.com/">
     <img src="client/public/images/OEWhite.jpg" alt="UPWARDLogo" height="100">
@@ -182,3 +185,7 @@ Portfolio: [https://andreagjackson.com/](https://andreagjackson.com/)
 Live Link: [https://openexotics.herokuapp.com/](https://openexotics.herokuapp.com/)
 
 Project Link: [https://github.com/aganesh0988/OpenExotics](https://github.com/aganesh0988/OpenExotics)
+
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/andrea-jackson1/
