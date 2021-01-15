@@ -2,6 +2,8 @@
 [![Portfolio][portfolio-shield]][portfolio-url]
 [![Live Link][live-link-shield]][live-link-url]
 
+<br /><br />
+
 
 <p align="center">
   <a target="_blank" href="https://openexotics.herokuapp.com/">
