@@ -187,5 +187,5 @@ Live Link: [https://openexotics.herokuapp.com/](https://openexotics.herokuapp.co
 Project Link: [https://github.com/aganesh0988/OpenExotics](https://github.com/aganesh0988/OpenExotics)
 
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-red.svg?style=for-the-badge&logo=linkedin&colorB=red
 [linkedin-url]: https://www.linkedin.com/in/andrea-jackson1/
