@@ -4,7 +4,7 @@
   </a>
 </p>
 
-## About The Project
+# About The Project
 I developed this app based off of Open Table, but with an exotic car twist. A user can browse through different exotic car dealerships to set up a meeting with a sales associate.
 <br />
 
