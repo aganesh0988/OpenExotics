@@ -6,7 +6,8 @@
 
 # About The Project
 I developed this app based off of Open Table, but with an exotic car twist. A user can browse through different exotic car dealerships to set up a meeting with a sales associate.
-<br />
+
+<br /><br />
 
 ## Built With
 I developed this full-stack application using a JavaScript / React frontend and a Python / Flask backend.
@@ -34,7 +35,7 @@ I developed this full-stack application using a JavaScript / React frontend and 
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 
 
-<br />
+
 
 Deployed with:
 * [<img alt="Heroku icon" src="https://img.icons8.com/color/452/heroku.png" align="left" height="20">](https://www.heroku.com/) [Heroku](https://www.heroku.com/)
