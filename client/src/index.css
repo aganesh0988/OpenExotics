@@ -130,6 +130,7 @@ iframe{
     height: 30px;
     width: 170px;
     font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navlink-container__search-choices-div>a:link, a:visited, a:active{
