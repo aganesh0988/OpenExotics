@@ -123,6 +123,12 @@ iframe{
 .navlink-container__search-input{
     display: block;
     position: static;
+    height: 30px;
+    width: 170px;
+}
+.navlink-container__search-input>input{
+    height: 30px;
+    width: 170px;
 }
 
 .navlink-container__search-choices-div>a:link, a:visited, a:active{
