@@ -131,6 +131,7 @@ iframe{
     width: 170px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps
 }
 
 .navlink-container__search-choices-div>a:link, a:visited, a:active{
