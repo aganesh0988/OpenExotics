@@ -7,7 +7,7 @@
 
 <p align="center">
   <a target="_blank" href="https://openexotics.herokuapp.com/">
-    <img src="client/public/images/OEWhite.jpg" alt="UPWARDLogo" height="150">
+    <img src="client/public/images/OEWhite.jpg" alt="OELogo" height="150">
   </a>
 </p>
 
