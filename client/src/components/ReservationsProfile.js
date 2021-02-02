@@ -4,6 +4,12 @@ import AuthContext from '../auth'
 
 const ReservationsProfile = () => {
 
+    useEffect(() => {
+        async function getReservationsProfile() {
+
+        }
+    })
+
 }
 
 export default ReservationsProfile
