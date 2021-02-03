@@ -10,6 +10,7 @@ const ReservationsProfile = () => {
 
     useEffect(() => {
         async function getReservationsProfile() {
+            console.log("HELLLOOOOOOOOOOOOOOOthere")
             const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
             const data = await response.json();
             setReservationsProf(data.reservationsProf)
@@ -19,7 +20,7 @@ const ReservationsProfile = () => {
 
     return (
         <>
-            <h1>Hello, {reservationsProf.id}</h1>
+            <h1>Hello,</h1>
         </>
     )
 
