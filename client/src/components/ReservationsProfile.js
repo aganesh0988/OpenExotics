@@ -6,7 +6,7 @@ const ReservationsProfile = () => {
 
     useEffect(() => {
         async function getReservationsProfile() {
-
+            const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
         }
     })
 
