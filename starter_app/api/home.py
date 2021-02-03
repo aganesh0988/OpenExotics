@@ -36,9 +36,9 @@ def reservation_get():
     return {'reservations': [reservation.to_dict() for reservation in response]}, 200
 
 
-@bp.route('/dealership/reservations/profile')
+@bp.route('/dealership/reservations/profile/<int:userID')
 def get_reservations_profile():
-    response
+    response = Reservation.query.filter_by(user_id=userID)
 
 
 @bp.route('/dealership/reservation/<int:resId>', methods=["DELETE"])
