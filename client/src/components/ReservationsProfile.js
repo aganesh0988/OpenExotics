@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import AuthContext from '../auth'
 
 const ReservationsProfile = () => {
+    const history = useHistory()
+    const idString = history.location.pathname.split('/')[4]
+    const userID = parseInt(idString, 10)
 
-    const [reservationsProf, setReservationsProf] = useState([])
+    const [reservationsProf, setReservationsProf] = useState(userID)
 
     useEffect(() => {
         async function getReservationsProfile() {
@@ -13,11 +15,11 @@ const ReservationsProfile = () => {
             setReservationsProf(data.reservationsProf)
         }
         getReservationsProfile()
-    }, [])
+    }, [userID])
 
     return (
         <>
-            <h1>Hello</h1>
+            <h1>Hello, {reservationsProf.id}</h1>
         </>
     )
 
