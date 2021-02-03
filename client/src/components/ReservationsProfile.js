@@ -4,11 +4,16 @@ import AuthContext from '../auth'
 
 const ReservationsProfile = () => {
 
+    const [reservationsProf, setReservationsProf] = useState([])
+
     useEffect(() => {
         async function getReservationsProfile() {
             const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
+            const data = await response.json();
+            setReservationsProf(data.reservationsProf)
         }
-    })
+        getReservationsProfile()
+    }, [])
 
 }
 
