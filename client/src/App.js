@@ -8,6 +8,7 @@ import SignUp from './components/SignUp';
 import Navigation from './components/Navigation';
 import DealerProfile from './components/DealerProfile';
 import ReservationsPage from './components/ReservationsPage';
+import ReservationsProfile from './components/ReservationsProfile';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import AuthContext from './auth'
@@ -85,6 +86,7 @@ function App() {
                     <Route path="/dealerships" component={Dealerships}></Route>
                     <Route path="/login" onClick={logoutUser}></Route>
                     <Route path="/dealership/:id" exact={true} component={DealerProfile}></Route>
+                    <Route path="/dealership/reservation/profile/:userID" component={ReservationsProfile}></Route>
                 </Switch>
                 <Footer />
             </AuthContext.Provider>
