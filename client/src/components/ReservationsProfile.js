@@ -15,6 +15,12 @@ const ReservationsProfile = () => {
         getReservationsProfile()
     }, [])
 
+    return (
+        <>
+            <h1>Hello</h1>
+        </>
+    )
+
 }
 
 export default ReservationsProfile
