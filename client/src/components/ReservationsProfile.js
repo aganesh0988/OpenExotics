@@ -10,10 +10,10 @@ const ReservationsProfile = () => {
 
     useEffect(() => {
         async function getReservationsProfile() {
-            console.log("HELLLOOOOOOOOOOOOOOOthere")
             const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
             const data = await response.json();
             setReservationsProf(data.reservationsProf)
+            console.log("HELLLOOOOOOOOOOOOOOOthere", data)
         }
         getReservationsProfile()
     }, [userID])
