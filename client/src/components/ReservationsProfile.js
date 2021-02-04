@@ -6,21 +6,21 @@ const ReservationsProfile = () => {
     const idString = history.location.pathname.split('/')[4]
     const userID = parseInt(idString, 10)
 
-    const [reservationsProf, setReservationsProf] = useState(userID)
+    const [reservations, setReservationsProf] = useState(userID)
 
     useEffect(() => {
         async function getReservationsProfile() {
             const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
             const data = await response.json();
-            setReservationsProf(data.reservationsProf)
-            console.log("HELLLOOOOOOOOOOOOOOOthere", data)
+            setReservationsProf(data.reservations)
+            console.log("HELLLOOOOOOOOOOOOOOOthere", data.reservations)
         }
         getReservationsProfile()
     }, [userID])
 
     return (
         <>
-            <h1>Hello,</h1>
+            <h1>Hello, </h1>
         </>
     )
 
