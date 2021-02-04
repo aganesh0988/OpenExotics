@@ -18,7 +18,7 @@ const ReservationsProfile = () => {
         getReservationsProfile()
     }, [userID])
 
-    const allReservations = reservations.map((reservation) => <div key={reservation.id} reservation={reservation}> </div>)
+    // const allReservations = reservations.map((reservation) => <div key={reservation.id} reservation={reservation}> </div>)
 
     return (
         <>
