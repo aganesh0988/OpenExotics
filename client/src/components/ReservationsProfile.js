@@ -17,13 +17,16 @@ const ReservationsProfile = () => {
             console.log("HELLLOOOOOOOOOOOOOOOthere", data.reservations)
         }
         getReservationsProfile()
-    }, [userID])
+    }, [])
 
-    const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.id} reservation={reservation} />)
+    console.log('outsideeeeeeeeeeee', reservations)
+
+    // const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.user_id} reservation={reservation} />)
 
     return (
         <>
             <h1>Hello, </h1>
+            {/* <div>{allReservations}</div> */}
         </>
     )
 
