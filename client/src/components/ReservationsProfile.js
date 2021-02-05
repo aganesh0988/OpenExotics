@@ -19,7 +19,7 @@ const ReservationsProfile = () => {
         getReservationsProfile()
     }, [userID])
 
-    const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.id} reservation={reservation}> </ResProfLayout>)
+    const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.id} reservation={reservation} />)
 
     return (
         <>
