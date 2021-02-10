@@ -21,7 +21,7 @@ const ReservationsProfile = () => {
 
     console.log('outsideeeeeeeeeeee', reservations)
 
-    // const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.user_id} reservation={reservation} />)
+    const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.user_id} reservation={reservation} />)
 
     return (
         <>
