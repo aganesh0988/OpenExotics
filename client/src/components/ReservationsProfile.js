@@ -13,7 +13,7 @@ const ReservationsProfile = () => {
         async function getReservationsProfile() {
             const response = await fetch(`/api/home/dealership/reservations/profile/${userID}`)
             const data = await response.json();
-            setReservationsProf(data.reservations)
+            setReservationsProf(data.reservations);
             console.log("HELLLOOOOOOOOOOOOOOOthere", data.reservations)
         }
         getReservationsProfile()
@@ -21,7 +21,7 @@ const ReservationsProfile = () => {
 
     console.log('outsideeeeeeeeeeee', reservations[0])
 
-    // const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.user_id} reservation={reservation} />)
+    const allReservations = reservations.map((reservation) => <ResProfLayout key={reservation.id} reservation={reservation} />)
 
 
     return (
