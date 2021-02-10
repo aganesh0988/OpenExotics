@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 const ResProfLayout = (props) => {
     const { reservation } = props;
@@ -8,7 +7,7 @@ const ResProfLayout = (props) => {
 
     return (
         <>
-            <h1>HI, {reservation}</h1>
+            <h1>HI, {reservation.dealership_name}</h1>
         </>
     )
 
