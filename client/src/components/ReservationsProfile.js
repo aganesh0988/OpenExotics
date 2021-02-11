@@ -25,7 +25,7 @@ const ReservationsProfile = () => {
 
     return (
         <>
-            <h1>Hello, </h1>
+            <h1>Below are your confirmed reservations  </h1>
             <div>{allReservations}</div>
         </>
     )
