@@ -7,6 +7,7 @@ const ResProfLayout = (props) => {
     return (
         <>
             <div>{reservation.dealership_name}</div>
+            <div>{reservation.start_time}</div>
         </>
     )
 
