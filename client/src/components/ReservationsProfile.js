@@ -7,7 +7,7 @@ const ReservationsProfile = () => {
     const idString = history.location.pathname.split('/')[4]
     const userID = parseInt(idString, 10)
 
-    const [reservations, setReservationsProf] = useState(userID)
+    const [reservations, setReservationsProf] = useState([userID])
 
     useEffect(() => {
         async function getReservationsProfile() {
