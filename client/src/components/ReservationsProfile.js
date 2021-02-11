@@ -26,7 +26,7 @@ const ReservationsProfile = () => {
     return (
         <>
             <h1>Hello, </h1>
-            {/* <div>{allReservations}</div> */}
+            <div>{allReservations}</div>
         </>
     )
 
