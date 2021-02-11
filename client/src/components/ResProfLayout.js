@@ -6,7 +6,7 @@ const ResProfLayout = (props) => {
 
     return (
         <>
-            <h1>{reservation.dealership_name}</h1>
+            <div>{reservation.dealership_name}</div>
         </>
     )
 
